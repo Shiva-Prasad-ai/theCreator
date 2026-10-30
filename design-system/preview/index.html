@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreatorOS AI — Design System & Brand Deliverables (H2)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="preview.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/logo-mark.svg">
+</head>
+<body>
+
+  <!-- Ambient Cosmic Grid Overlay -->
+  <div class="cosmic-grid-overlay"></div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast-msg">Copied token to clipboard!</div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-wrap">
+        <!-- Embedded Logo Mark -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="38" height="38" fill="none">
+          <circle cx="40" cy="40" r="28" fill="#7C3AED" opacity="0.2" />
+          <path d="M 64 24 C 58 14 47 10 38 10 C 22 10 10 23 10 40 C 10 57 22 70 38 70 C 50 70 60 63 65 52" stroke="url(#nav-p)" stroke-width="6" stroke-linecap="round" />
+          <path d="M 52 26 C 46 20 38 20 33 22 C 24 25 18 32 18 41 C 18 49 24 57 33 59 C 42 61 51 56 56 47" stroke="url(#nav-c)" stroke-width="4.5" stroke-linecap="round" />
+          <path d="M 46 40 L 41 35 L 36 40 L 41 45 Z" fill="#22D3EE" />
+          <circle cx="41" cy="40" r="2.5" fill="#FFFFFF" />
+          <defs>
+            <linearGradient id="nav-p" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7C3AED"/><stop offset="100%" stop-color="#22D3EE"/>
+            </linearGradient>
+            <linearGradient id="nav-c" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#0891B2"/><stop offset="100%" stop-color="#22D3EE"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span style="font-family: var(--font-heading); font-size: 20px; font-weight: 700; color: #F8FAFC;">
+          Creator<span style="color: #22D3EE;">OS</span>
+        </span>
+        <span class="nav-tag">H2 System</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#colors">Colors</a></li>
+          <li><a href="#typography">Typography</a></li>
+          <li><a href="#spacing">Spacing & Radius</a></li>
+          <li><a href="#identity">Brand Identity</a></li>
+          <li><a href="#buttons">Buttons</a></li>
+          <li><a href="#headings">Headings</a></li>
+          <li><a href="#ui-preview">Live UI</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="hero-section">
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+        <span>CodeMeet 2026 • UI/UX Deliverables by Jeevan</span>
+      </div>
+
+      <h1 class="hero-headline">
+        Autonomous Design System for <br>
+        <span class="text-gradient">Next-Gen CreatorOS AI</span>
+      </h1>
+
+      <p class="hero-subhead">
+        A premium futuristic SaaS foundation built with dark navy depth, electric violet energy, and bioluminescent cyan telemetry. Designed for instant Next.js & shadcn/ui integration.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#ui-preview" class="btn btn-primary btn-lg">Explore UI Components</a>
+        <a href="#colors" class="btn btn-outline btn-lg">View Design Tokens</a>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 01: COLOR SYSTEM ==================== -->
+    <section id="colors" class="section-block">
+      <div class="section-eyebrow">Section 01 • Brand Color Palette</div>
+      <h2 class="section-title">Brand Color Palette & Semantic Tokens</h2>
+      <p class="section-description">
+        Semantic token names engineered for dark-mode depth, WCAG 2.1 AA accessibility, and automatic Tailwind/shadcn color synchronization. Incorporates documentation specifications for Tailwind (Deliverable 5) and shadcn/ui (Deliverable 6). Click or press Enter on any swatch to copy.
+      </p>
+
+      <div class="grid-cards">
+        <!-- Background -->
+        <div class="color-swatch-card" tabindex="0" role="button" aria-label="Copy Background hex code" onclick="copyValue('#0B1020', 'Background')" onkeydown="handleKey(event, '#0B1020', 'Background')">
+          <div class="color-preview-box" style="background-color: #0B1020; border: 1px solid #263453;"></div>
+          <div class="color-swatch-info">
+            <div class="color-token-name">Background</div>
+            <div class="color-token-hex"><span>#0B1020</span> <span>224 49% 8%</span></div>
+            <div class="color-token-role">Deep cosmic dark navy canvas base</div>
+          </div>
+        </div>
+
+        <!-- Surface Default -->
+        <div class="color-swatch-card" tabindex="0" role="button" aria-label="Copy Surface Default hex code" onclick="copyValue('#151C30', 'Surface Default')" onkeydown="handleKey(event, '#151C30', 'Surface Default')">
+          <div class="color-preview-box" style="background-color: #151C30; border: 1px solid #263453;"></div>
+          <div class="color-swatch-info">
+            <div class="color-token-name">Surface Default</div>
+            <div class="color-token-hex"><span>#151C30</span> <span>224 39% 14%</span></div>
+            <div class="color-token-role">Card panels, modals, and data tables</div>
+          </div>
+        </div>
+
+        <!-- Surface Elevated -->
+        <div class="color-swatch-card" tabindex="0" role="button" aria-label="Copy Surface Elevated hex code" onclick="copyValue('#1D2640', 'Surface Elevated')" onkeydown="handleKey(event, '#1D2640', 'Surface Elevated')">
+          <div class="color-preview-box" style="background-color: #1D2640; border: 1px solid #3B4B74;"></div>
+          <div class="color-swatch-info">
+            <div class="color-token-name">Surface Elevated</div>
+            <div class="color-token-hex"><span>#1D2640</span> <span>224 37% 18%</span></div>
+            <div class="color-token-role">Dropdowns, popovers, secondary buttons</div>
+          </div>
+        </div>
+
+        <!-- Primary Violet -->
+        <div class="color-swatch-card" tabindex="0" role="button" aria-label="Copy Primary Violet hex code" onclick="copyValue('#7C3AED', 'Primary Violet')" onkeydown="handleKey(event, '#7C3AED', 'Primary Violet')">
+          <div class="color-preview-box" style="background-color: #7C3AED; box-shadow: 0 0 20px -3px rgba(124, 58, 237, 0.5);"></div>
+          <div class="color-swatch-info">
+            <div class="color-token-name">Primary Violet</div>
+            <div class="color-token-hex"><span>#7C3AED</span> <span>262 83% 58%</span></div>
+            <div class="color-token-role">Primary interactive actions & brand glow</div>
+          </div>
+        </div>
+
+        <!-- Cyan Accent -->
+        <div class="color-swatch-card" tabindex="0" role="button" aria-label="Copy Accent Cyan hex code" onclick="copyValue('#22D3EE', 'Accent Cyan')" onkeydown="handleKey(event, '#22D3EE', 'Accent Cyan')">
+          <div class="color-preview-box" style="background-color: #22D3EE; box-shadow: 0 0 20px -3px rgba(34, 211, 238, 0.5);"></div>
+          <div class="color-swatch-info">
+            <div class="color-token-name">Accent Cyan</div>
+            <div class="color-token-hex"><span>#22D3EE</span> <span>189 94% 54%</span></div>
+            <div class="color-token-role">AI telemetry, highlights, and active states</div>
+          </div>
+        </div>
+
+        <!-- Text Primary -->
+        <div class="color-swatch-card" tabindex="0" role="button" aria-label="Copy Text Primary hex code" onclick="copyValue('#F8FAFC', 'Text Primary')" onkeydown="handleKey(event, '#F8FAFC', 'Text Primary')">
+          <div class="color-preview-box" style="background-color: #F8FAFC;"></div>
+          <div class="color-swatch-info">
+            <div class="color-token-name">Text Primary</div>
+            <div class="color-token-hex"><span>#F8FAFC</span> <span>210 40% 98%</span></div>
+            <div class="color-token-role">Headings, high-contrast labels, active text</div>
+          </div>
+        </div>
+
+        <!-- Text Muted -->
+        <div class="color-swatch-card" tabindex="0" role="button" aria-label="Copy Text Muted hex code" onclick="copyValue('#AAB5CD', 'Text Muted')" onkeydown="handleKey(event, '#AAB5CD', 'Text Muted')">
+          <div class="color-preview-box" style="background-color: #AAB5CD;"></div>
+          <div class="color-swatch-info">
+            <div class="color-token-name">Text Muted</div>
+            <div class="color-token-hex"><span>#AAB5CD</span> <span>222 28% 73%</span></div>
+            <div class="color-token-role">Descriptions, timestamps, secondary meta</div>
+          </div>
+        </div>
+
+        <!-- Surface Border -->
+        <div class="color-swatch-card" tabindex="0" role="button" aria-label="Copy Border Token hex code" onclick="copyValue('#263453', 'Surface Border')" onkeydown="handleKey(event, '#263453', 'Surface Border')">
+          <div class="color-preview-box" style="background-color: #263453;"></div>
+          <div class="color-swatch-info">
+            <div class="color-token-name">Border Token</div>
+            <div class="color-token-hex"><span>#263453</span> <span>222 37% 24%</span></div>
+            <div class="color-token-role">Dividers, inputs, card boundary strokes</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 02: TYPOGRAPHY SCALE ==================== -->
+    <section id="typography" class="section-block">
+      <div class="section-eyebrow">Section 02 • Typography System</div>
+      <h2 class="section-title">Typography Scale & Hierarchy</h2>
+      <p class="section-description">
+        Dual-typeface architecture featuring <strong>Space Grotesk</strong> for geometric futurism and <strong>Inter</strong> for high-density UI legibility (Corresponds to H2 Deliverable 2).
+      </p>
+
+      <div class="table-responsive">
+        <table class="type-matrix">
+          <thead>
+            <tr>
+              <th>Scale Level</th>
+              <th>Typeface</th>
+              <th>Specs (Size / Leading / Tracking)</th>
+              <th>Live Sample</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><span class="type-tag">Display</span></td>
+            <td>Space Grotesk 700</td>
+            <td>60px (3.75rem) / 1.1 / -0.035em</td>
+            <td style="font-family: var(--font-heading); font-size: 38px; font-weight: 700; letter-spacing: -0.035em; line-height: 1.1;">
+              AI Studio Engine
+            </td>
+          </tr>
+          <tr>
+            <td><span class="type-tag">H1</span></td>
+            <td>Space Grotesk 700</td>
+            <td>40px (2.5rem) / 1.15 / -0.025em</td>
+            <td style="font-family: var(--font-heading); font-size: 28px; font-weight: 700; letter-spacing: -0.025em;">
+              Creator Command Center
+            </td>
+          </tr>
+          <tr>
+            <td><span class="type-tag">H2</span></td>
+            <td>Space Grotesk 600</td>
+            <td>32px (2.0rem) / 1.2 / -0.02em</td>
+            <td style="font-family: var(--font-heading); font-size: 24px; font-weight: 600; letter-spacing: -0.02em;">
+              Revenue & Audience Velocity
+            </td>
+          </tr>
+          <tr>
+            <td><span class="type-tag">H3</span></td>
+            <td>Space Grotesk 600</td>
+            <td>24px (1.5rem) / 1.25 / -0.015em</td>
+            <td style="font-family: var(--font-heading); font-size: 20px; font-weight: 600; letter-spacing: -0.015em;">
+              Autonomous Workflow Pipelines
+            </td>
+          </tr>
+          <tr>
+            <td><span class="type-tag">H4</span></td>
+            <td>Space Grotesk 600</td>
+            <td>20px (1.25rem) / 1.3 / -0.01em</td>
+            <td style="font-family: var(--font-heading); font-size: 18px; font-weight: 600; letter-spacing: -0.01em;">
+              Agent Memory Context Parameters
+            </td>
+          </tr>
+          <tr>
+            <td><span class="type-tag">Body XL</span></td>
+            <td>Inter 400</td>
+            <td>20px (1.25rem) / 1.6 / -0.01em</td>
+            <td style="font-family: var(--font-body); font-size: 18px; color: var(--text-muted);">
+              Lead paragraph introducing complex AI-driven creator monetization modules.
+            </td>
+          </tr>
+          <tr>
+            <td><span class="type-tag">Body Base</span></td>
+            <td>Inter 400</td>
+            <td>16px (1.0rem) / 1.5 / 0</td>
+            <td style="font-family: var(--font-body); font-size: 16px; color: var(--text-primary);">
+              Standard interface text used across cards, tables, prompts, and modal containers.
+            </td>
+          </tr>
+          <tr>
+            <td><span class="type-tag">Body SM</span></td>
+            <td>Inter 400</td>
+            <td>14px (0.875rem) / 1.45 / +0.005em</td>
+            <td style="font-family: var(--font-body); font-size: 14px; color: var(--text-muted);">
+              Secondary metadata, field labels, button subtext, and telemetry indicators.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 03: SPACING & RADIUS ==================== -->
+    <section id="spacing" class="section-block">
+      <div class="section-eyebrow">Section 03 • Spatial System</div>
+      <h2 class="section-title">4px Spacing System & Border Radius</h2>
+      <p class="section-description">
+        Strict 4px modular spacing grid ensures mathematical alignment across components, cards, layouts, and modals (Corresponds to H2 Deliverable 3).
+      </p>
+
+      <div class="spacing-ruler-grid">
+        <div class="spacing-row">
+          <span class="spacing-name">space-1</span>
+          <span class="spacing-val">4px</span>
+          <div class="spacing-bar" style="width: 4px;"></div>
+        </div>
+        <div class="spacing-row">
+          <span class="spacing-name">space-2</span>
+          <span class="spacing-val">8px</span>
+          <div class="spacing-bar" style="width: 8px;"></div>
+        </div>
+        <div class="spacing-row">
+          <span class="spacing-name">space-3</span>
+          <span class="spacing-val">12px</span>
+          <div class="spacing-bar" style="width: 12px;"></div>
+        </div>
+        <div class="spacing-row">
+          <span class="spacing-name">space-4</span>
+          <span class="spacing-val">16px</span>
+          <div class="spacing-bar" style="width: 16px;"></div>
+        </div>
+        <div class="spacing-row">
+          <span class="spacing-name">space-6</span>
+          <span class="spacing-val">24px</span>
+          <div class="spacing-bar" style="width: 24px;"></div>
+        </div>
+        <div class="spacing-row">
+          <span class="spacing-name">space-8</span>
+          <span class="spacing-val">32px</span>
+          <div class="spacing-bar" style="width: 32px;"></div>
+        </div>
+        <div class="spacing-row">
+          <span class="spacing-name">space-12</span>
+          <span class="spacing-val">48px</span>
+          <div class="spacing-bar" style="width: 48px;"></div>
+        </div>
+        <div class="spacing-row">
+          <span class="spacing-name">space-16</span>
+          <span class="spacing-val">64px</span>
+          <div class="spacing-bar" style="width: 64px;"></div>
+        </div>
+      </div>
+
+      <!-- Radius Showcase -->
+      <div class="radius-showcase-grid">
+        <div class="radius-box" style="border-radius: 0px;">
+          <span class="radius-token">none</span>
+          <span class="radius-value">0px</span>
+        </div>
+        <div class="radius-box" style="border-radius: 4px;">
+          <span class="radius-token">xs</span>
+          <span class="radius-value">4px (Tags)</span>
+        </div>
+        <div class="radius-box" style="border-radius: 6px;">
+          <span class="radius-token">sm</span>
+          <span class="radius-value">6px (Small)</span>
+        </div>
+        <div class="radius-box" style="border-radius: 8px;">
+          <span class="radius-token">md</span>
+          <span class="radius-value">8px (Standard)</span>
+        </div>
+        <div class="radius-box" style="border-radius: 12px;">
+          <span class="radius-token">lg</span>
+          <span class="radius-value">12px (Cards)</span>
+        </div>
+        <div class="radius-box" style="border-radius: 16px;">
+          <span class="radius-token">xl</span>
+          <span class="radius-value">16px (Modals)</span>
+        </div>
+        <div class="radius-box" style="border-radius: 9999px;">
+          <span class="radius-token">full</span>
+          <span class="radius-value">9999px (Pills)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 04: BRAND ASSETS / LOGO ==================== -->
+    <section id="identity" class="section-block">
+      <div class="section-eyebrow">Section 04 • Vector Identity</div>
+      <h2 class="section-title">Original CreatorOS AI SVG Logo</h2>
+      <p class="section-description">
+        Bespoke vector identity featuring an interlocking creator aperture and neural spark core. Delivered in standalone icon, full horizontal lockup, and dark surface variants (Corresponds to H2 Deliverable 4).
+      </p>
+
+      <div class="logo-showcase-grid">
+        <!-- Standalone Mark -->
+        <div class="logo-display-card">
+          <img src="../assets/logo-mark.svg" width="96" height="96" alt="CreatorOS AI Mark">
+          <div style="font-family: var(--font-heading); font-size: 15px; font-weight: 600;">Standalone Mark</div>
+          <div style="font-size: 12px; color: var(--text-muted); font-family: var(--font-mono);">assets/logo-mark.svg</div>
+        </div>
+
+        <!-- Horizontal Lockup -->
+        <div class="logo-display-card">
+          <img src="../assets/logo.svg" width="260" height="65" alt="CreatorOS AI Full Lockup">
+          <div style="font-family: var(--font-heading); font-size: 15px; font-weight: 600;">Primary Full Lockup</div>
+          <div style="font-size: 12px; color: var(--text-muted); font-family: var(--font-mono);">assets/logo.svg</div>
+        </div>
+
+        <!-- Dark Contrast Variant -->
+        <div class="logo-display-card contrast-dark">
+          <img src="../assets/logo-dark.svg" width="280" height="78" alt="CreatorOS AI Dark Badge">
+          <div style="font-family: var(--font-heading); font-size: 15px; font-weight: 600;">Surface Badge Lockup</div>
+          <div style="font-size: 12px; color: var(--text-muted); font-family: var(--font-mono);">assets/logo-dark.svg</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 05: BUTTON COMPONENTS ==================== -->
+    <section id="buttons" class="section-block">
+      <div class="section-eyebrow">Section 05 • Component Specifications</div>
+      <h2 class="section-title">Button Component Gallery</h2>
+      <p class="section-description">
+        Stateful, accessible, and high-performance buttons with futuristic micro-interactions (Corresponds to H2 Deliverable 7: Button Specifications).
+      </p>
+
+      <!-- Variants -->
+      <div class="component-showcase-panel">
+        <div class="showcase-group-title">Button Variants</div>
+        <div class="button-wrap-flex">
+          <button class="btn btn-primary btn-md">
+            <span>Primary Violet</span>
+          </button>
+          <button class="btn btn-accent btn-md">
+            <span>Accent Cyan</span>
+          </button>
+          <button class="btn btn-gradient btn-md">
+            <span>Cosmic Gradient</span>
+          </button>
+          <button class="btn btn-secondary btn-md">
+            <span>Secondary</span>
+          </button>
+          <button class="btn btn-outline btn-md">
+            <span>Outline</span>
+          </button>
+          <button class="btn btn-ghost btn-md">
+            <span>Ghost Action</span>
+          </button>
+          <button class="btn btn-destructive btn-md">
+            <span>Destructive</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Sizes & States -->
+      <div class="component-showcase-panel">
+        <div class="showcase-group-title">Sizes & Operational States</div>
+        <div class="button-wrap-flex">
+          <button class="btn btn-primary btn-sm">Small (32px)</button>
+          <button class="btn btn-primary btn-md">Default (40px)</button>
+          <button class="btn btn-primary btn-lg">Large (48px)</button>
+          
+          <!-- Icon Button -->
+          <button class="btn btn-outline btn-icon" title="Settings">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+          </button>
+
+          <!-- Loading State (Active, high contrast with glowing cyan spinner) -->
+          <button class="btn btn-primary btn-md btn-loading" aria-busy="true" aria-live="polite">
+            <svg class="spinner" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,0.25)"/>
+              <path d="M12 2a10 10 0 0 1 10 10" stroke="#22D3EE" stroke-linecap="round"/>
+            </svg>
+            <span class="btn-loading-text">Generating...</span>
+          </button>
+
+          <!-- Disabled State (Clearly dimmed, flat, desaturated) -->
+          <button class="btn btn-secondary btn-md" disabled aria-disabled="true">
+            Disabled State
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 06: HEADINGS & TYPOGRAPHY ==================== -->
+    <section id="headings" class="section-block">
+      <div class="section-eyebrow">Section 06 • Component Specifications</div>
+      <h2 class="section-title">Heading Hierarchy & Treatments</h2>
+      <p class="section-description">
+        Demonstration of heading tags and futuristic gradient and glow treatments (Corresponds to H2 Deliverable 7: Heading Specifications).
+      </p>
+
+      <div class="component-showcase-panel">
+        <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+          <div style="font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: #F8FAFC;">
+            H1: Autonomous Intelligence for Digital Creators
+          </div>
+          <div style="font-family: var(--font-heading); font-size: 26px; font-weight: 600; color: #F8FAFC;">
+            H2: Multi-Agent Workspace Orchestration
+          </div>
+          <div style="font-family: var(--font-heading); font-size: 22px; font-weight: 600; background: linear-gradient(135deg, #A78BFA 0%, #22D3EE 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            H3 Gradient: Synthetic Neural Assets Generation Pipeline
+          </div>
+          <div style="font-family: var(--font-heading); font-size: 18px; font-weight: 600; color: #AAB5CD;">
+            H4 Muted: Real-Time Telemetry & Token Consumption
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 07: REAL-WORLD UI MOCKUP ==================== -->
+    <section id="ui-preview" class="section-block">
+      <div class="section-eyebrow">Section 07 • Live UI Showcase</div>
+      <h2 class="section-title">Integrated CreatorOS AI Studio Preview</h2>
+      <p class="section-description">
+        A functional mockup of an AI creator dashboard module demonstrating how all tokens, colors, surfaces, and buttons coalesce (Corresponds to H2 Deliverable 8: Visual Preview).
+      </p>
+
+      <div class="mockup-container">
+        <!-- Mockup Header -->
+        <div class="mockup-header">
+          <div style="display: flex; align-items: center; gap: var(--space-3);">
+            <div style="width: 10px; height: 10px; border-radius: 50%; background: #10B981; box-shadow: 0 0 10px #10B981;"></div>
+            <div>
+              <div style="font-family: var(--font-heading); font-weight: 700; font-size: 16px;">AI Generation Studio v2.4</div>
+              <div style="font-size: 12px; color: var(--text-muted);">Autonomous Multi-Platform Distribution Model</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: var(--space-2);">
+            <button class="btn btn-secondary btn-sm">Export Data</button>
+            <button class="btn btn-accent btn-sm">Auto-Optimize</button>
+          </div>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div class="mockup-stats-grid">
+          <div class="mockup-stat-card">
+            <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">Monthly Recurring Revenue</div>
+            <div class="mockup-stat-val">$24,850.00</div>
+            <div style="font-size: 12px; color: #10B981; font-weight: 600; margin-top: 4px;">+18.4% from last month</div>
+          </div>
+          <div class="mockup-stat-card">
+            <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">Autonomous Video Scripts</div>
+            <div class="mockup-stat-val">142 Generated</div>
+            <div style="font-size: 12px; color: var(--accent-cyan); font-weight: 600; margin-top: 4px;">99.2% approval rate</div>
+          </div>
+          <div class="mockup-stat-card">
+            <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">AI Token Compute Remaining</div>
+            <div class="mockup-stat-val">842,500 <span style="font-size: 14px; color: var(--text-muted);">/ 1M</span></div>
+            <div style="font-size: 12px; color: #C4B5FD; font-weight: 600; margin-top: 4px;">Cosmic Tier Active</div>
+          </div>
+        </div>
+
+        <!-- Interactive AI Prompt Simulator -->
+        <div style="background: var(--surface-subtle); border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: var(--space-4);">
+          <div style="font-family: var(--font-heading); font-size: 14px; font-weight: 600; margin-bottom: var(--space-2); display: flex; justify-content: space-between;">
+            <span>AI Campaign Prompt Engine</span>
+            <span style="font-family: var(--font-mono); font-size: 12px; color: var(--accent-cyan);">LLM: Claude-3.5-Sonnet / Gemini-2.0</span>
+          </div>
+          <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+            <input type="text" 
+                   value="Generate 5 viral TikTok hooks and YouTube community polls for my AI Coding Series..." 
+                   readonly
+                   style="flex: 1; min-width: 200px; background: #0B1020; border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 10px 14px; color: var(--text-primary); font-family: var(--font-body); font-size: 14px; outline: none;">
+            <button class="btn btn-primary btn-md" onclick="simulateGenerate()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+              </svg>
+              <span>Execute Pipeline</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p style="margin-bottom: 8px;"><strong>CreatorOS AI Design System</strong> • CodeMeet 2026 Deliverables</p>
+      <p style="font-size: 12px; color: var(--text-subtle);">Crafted with precision by Jeevan (UI/UX Designer). Ready for Shiva's Next.js application setup.</p>
+    </div>
+  </footer>
+
+  <!-- Script for Toast Feedback & Simulation -->
+  <script>
+    function copyValue(val, label) {
+      navigator.clipboard.writeText(val).then(() => {
+        showToast(`Copied ${label} (${val}) to clipboard!`);
+      }).catch(() => {
+        showToast(`Selected: ${val}`);
+      });
+    }
+
+    function handleKey(e, val, label) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        copyValue(val, label);
+      }
+    }
+
+    function showToast(text) {
+      const toast = document.getElementById('toast');
+      toast.innerText = text;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+
+    function simulateGenerate() {
+      showToast('Running CreatorOS AI multi-agent synthesis...');
+    }
+  </script>
+</body>
+</html>
+

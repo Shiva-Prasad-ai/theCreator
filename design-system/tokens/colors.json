@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "CreatorOS AI Color Palette",
+  "version": "1.0.0",
+  "brand": {
+    "background": {
+      "hex": "#0B1020",
+      "hsl": "224 49% 8%",
+      "rgb": "11, 16, 32",
+      "description": "Deep cosmic dark navy background for primary page canvas"
+    },
+    "surface": {
+      "default": {
+        "hex": "#151C30",
+        "hsl": "224 39% 14%",
+        "rgb": "21, 28, 48",
+        "description": "Primary card, modal, and panel background"
+      },
+      "subtle": {
+        "hex": "#111728",
+        "hsl": "224 40% 11%",
+        "rgb": "17, 23, 40",
+        "description": "Recessed containers and secondary surfaces"
+      },
+      "elevated": {
+        "hex": "#1D2640",
+        "hsl": "224 37% 18%",
+        "rgb": "29, 38, 64",
+        "description": "Elevated cards, dropdown menus, and popovers"
+      },
+      "border": {
+        "hex": "#263453",
+        "hsl": "222 37% 24%",
+        "rgb": "38, 52, 83",
+        "description": "Subtle borders and separators with neon undertone"
+      },
+      "border-focus": {
+        "hex": "#7C3AED",
+        "hsl": "262 83% 58%",
+        "rgb": "124, 58, 237",
+        "description": "Focus ring and active card highlight border"
+      }
+    },
+    "primary": {
+      "50": "#F5F3FF",
+      "100": "#EDE9FE",
+      "200": "#DDD6FE",
+      "300": "#C4B5FD",
+      "400": "#A78BFA",
+      "500": "#8B5CF6",
+      "600": "#7C3AED",
+      "700": "#6D28D9",
+      "800": "#5B21B6",
+      "900": "#4C1D95",
+      "950": "#2E1065",
+      "default": {
+        "hex": "#7C3AED",
+        "hsl": "262 83% 58%",
+        "rgb": "124, 58, 237",
+        "description": "Signature electric violet for primary actions, badges, and glows"
+      },
+      "foreground": {
+        "hex": "#FFFFFF",
+        "hsl": "0 0% 100%",
+        "rgb": "255, 255, 255",
+        "description": "Text on primary color actions"
+      }
+    },
+    "accent": {
+      "50": "#ECFEFF",
+      "100": "#CFFAFE",
+      "200": "#A5F3FC",
+      "300": "#67E8F9",
+      "400": "#22D3EE",
+      "500": "#06B6D4",
+      "600": "#0891B2",
+      "700": "#0E7490",
+      "800": "#155E75",
+      "900": "#164E63",
+      "default": {
+        "hex": "#22D3EE",
+        "hsl": "189 94% 54%",
+        "rgb": "34, 211, 238",
+        "description": "Bioluminescent cyan accent for AI indicators, active tabs, and telemetry"
+      },
+      "foreground": {
+        "hex": "#083344",
+        "hsl": "197 79% 15%",
+        "rgb": "8, 51, 68",
+        "description": "Text on cyan accent badges"
+      }
+    },
+    "text": {
+      "primary": {
+        "hex": "#F8FAFC",
+        "hsl": "210 40% 98%",
+        "rgb": "248, 250, 252",
+        "description": "High-contrast crisp white for headings and core text"
+      },
+      "muted": {
+        "hex": "#AAB5CD",
+        "hsl": "222 28% 73%",
+        "rgb": "170, 181, 205",
+        "description": "Muted slate for descriptions, secondary metadata, and placeholders"
+      },
+      "subtle": {
+        "hex": "#64748B",
+        "hsl": "215 16% 47%",
+        "rgb": "100, 116, 139",
+        "description": "Tertiary text, timestamps, and subtle hints"
+      }
+    },
+    "status": {
+      "success": {
+        "hex": "#10B981",
+        "hsl": "158 64% 52%",
+        "rgb": "16, 185, 129",
+        "description": "Successful operations, verified badges, positive growth"
+      },
+      "warning": {
+        "hex": "#F59E0B",
+        "hsl": "38 92% 50%",
+        "rgb": "245, 158, 11",
+        "description": "Warnings, pending generation, cautions"
+      },
+      "error": {
+        "hex": "#EF4444",
+        "hsl": "0 84% 60%",
+        "rgb": "239, 68, 68",
+        "description": "Errors, failed AI pipelines, alerts"
+      },
+      "info": {
+        "hex": "#38BDF8",
+        "hsl": "199 89% 60%",
+        "rgb": "56, 189, 248",
+        "description": "Informative tips and system telemetry"
+      }
+    },
+    "gradients": {
+      "brand": "linear-gradient(135deg, #7C3AED 0%, #22D3EE 100%)",
+      "surface": "linear-gradient(180deg, rgba(21, 28, 48, 0.9) 0%, rgba(11, 16, 32, 0.95) 100%)",
+      "glow-violet": "radial-gradient(circle, rgba(124, 58, 237, 0.25) 0%, rgba(124, 58, 237, 0) 70%)",
+      "glow-cyan": "radial-gradient(circle, rgba(34, 211, 238, 0.25) 0%, rgba(34, 211, 238, 0) 70%)",
+      "card-border": "linear-gradient(135deg, rgba(124, 58, 237, 0.4) 0%, rgba(38, 52, 83, 0.3) 50%, rgba(34, 211, 238, 0.4) 100%)"
+    }
+  }
+}
+

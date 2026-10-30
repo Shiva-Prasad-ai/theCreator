@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "CreatorOS AI Border Radius & Elevation System",
+  "version": "1.0.0",
+  "radii": {
+    "none": { "value": "0px", "usage": "Sharp edge elements" },
+    "xs": { "value": "4px", "usage": "Micro badges, tags, code snippets" },
+    "sm": { "value": "6px", "usage": "Checkboxes, small inputs, tooltips" },
+    "md": { "value": "8px", "usage": "Buttons, inputs, dropdown items, standard UI controls" },
+    "lg": { "value": "12px", "usage": "Cards, modular containers, dialogs" },
+    "xl": { "value": "16px", "usage": "Featured cards, modals, hero containers" },
+    "2xl": { "value": "24px", "usage": "Large surface panels, floating docks" },
+    "3xl": { "value": "32px", "usage": "Outer dashboard shells and hero cards" },
+    "full": { "value": "9999px", "usage": "Pills, avatars, circular status indicators, icon buttons" }
+  },
+  "shadows": {
+    "subtle": "0 1px 2px 0 rgba(0, 0, 0, 0.35)",
+    "surface": "0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3)",
+    "elevated": "0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.4)",
+    "glow-violet": "0 0 25px -5px rgba(124, 58, 237, 0.45)",
+    "glow-cyan": "0 0 25px -5px rgba(34, 211, 238, 0.45)",
+    "glow-combined": "0 0 35px -5px rgba(124, 58, 237, 0.35), 0 0 15px -3px rgba(34, 211, 238, 0.3)"
+  }
+}
+

@@ -1,0 +1,130 @@
+/**
+ * CreatorOS AI - shadcn/ui Compatible Theme CSS
+ * Formatted for standard shadcn/ui components (Radix UI + Tailwind).
+ * Drop directly into Shiva's app/globals.css or import into layout.tsx.
+ */
+
+@layer base {
+  :root,
+  .dark {
+    /* Base canvas & typography */
+    --background: 224 49% 8%;         /* #0B1020 - Deep cosmic dark navy */
+    --foreground: 210 40% 98%;        /* #F8FAFC - Crisp white text */
+
+    /* Cards, Modals & Surfaces */
+    --card: 224 39% 14%;              /* #151C30 - Primary surface */
+    --card-foreground: 210 40% 98%;   /* #F8FAFC */
+
+    --popover: 224 37% 18%;           /* #1D2640 - Elevated surface */
+    --popover-foreground: 210 40% 98%;/* #F8FAFC */
+
+    /* Primary brand action: Electric Violet */
+    --primary: 262 83% 58%;           /* #7C3AED */
+    --primary-foreground: 0 0% 100%;  /* #FFFFFF */
+
+    /* Secondary surface action */
+    --secondary: 224 37% 18%;         /* #1D2640 */
+    --secondary-foreground: 210 40% 98%;
+
+    /* Muted elements & secondary metadata */
+    --muted: 224 37% 16%;             /* #161F36 */
+    --muted-foreground: 222 28% 73%;  /* #AAB5CD */
+
+    /* Accent highlight: Bioluminescent Cyan */
+    --accent: 189 94% 54%;            /* #22D3EE */
+    --accent-foreground: 197 79% 15%; /* #083344 */
+
+    /* Alerts and states */
+    --destructive: 0 84% 60%;         /* #EF4444 */
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 158 64% 52%;           /* #10B981 */
+    --warning: 38 92% 50%;            /* #F59E0B */
+
+    /* Borders, inputs, and focus outline */
+    --border: 222 37% 24%;            /* #263453 */
+    --input: 222 37% 24%;             /* #263453 */
+    --ring: 262 83% 58%;              /* #7C3AED - Violet focus ring */
+
+    /* Spacing & curvature */
+    --radius: 0.5rem;                 /* 8px standard control radius */
+
+    /* shadcn/ui Sidebar Variables */
+    --sidebar-background: 224 49% 7%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 224 39% 14%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 37% 20%;
+    --sidebar-ring: 262 83% 58%;
+
+    /* Chart Data Visualization Colors */
+    --chart-1: 262 83% 58%;           /* Violet */
+    --chart-2: 189 94% 54%;           /* Cyan */
+    --chart-3: 158 64% 52%;           /* Emerald */
+    --chart-4: 38 92% 50%;            /* Amber */
+    --chart-5: 280 87% 65%;           /* Fuchsia */
+  }
+}
+
+/* ==========================================================================
+   Tailwind CSS v4 @theme inline Bindings
+   (Used if Shiva initializes Next.js with Tailwind CSS v4)
+   ========================================================================== */
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Global design system utilities */
+@layer utilities {
+  .bg-cosmic-grid {
+    background-size: 32px 32px;
+    background-image: 
+      linear-gradient(to right, rgba(38, 52, 83, 0.25) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(38, 52, 83, 0.25) 1px, transparent 1px);
+  }
+
+  .glow-border {
+    position: relative;
+  }
+  .glow-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.6) 0%, rgba(34, 211, 238, 0.6) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
+

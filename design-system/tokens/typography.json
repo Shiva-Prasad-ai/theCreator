@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "CreatorOS AI Typography Scale",
+  "version": "1.0.0",
+  "fontFamilies": {
+    "heading": {
+      "name": "Space Grotesk",
+      "fallbacks": ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+      "weights": [500, 600, 700],
+      "usage": "Page titles, hero sections, section headers, card titles, and high-impact metrics"
+    },
+    "body": {
+      "name": "Inter",
+      "fallbacks": ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+      "weights": [400, 500, 600, 700],
+      "usage": "Paragraphs, navigation links, form controls, tooltips, tables, and long-form content"
+    },
+    "mono": {
+      "name": "JetBrains Mono",
+      "fallbacks": ["Fira Code", "Courier New", "monospace"],
+      "weights": [400, 500],
+      "usage": "API keys, prompt logs, tokens, code blocks, and AI generation parameters"
+    }
+  },
+  "scale": {
+    "display": {
+      "fontSize": "3.75rem",
+      "fontSizePx": "60px",
+      "lineHeight": "1.1",
+      "letterSpacing": "-0.035em",
+      "fontWeight": "700",
+      "fontFamily": "heading",
+      "usage": "Hero banner headlines and landing page highlights"
+    },
+    "h1": {
+      "fontSize": "2.5rem",
+      "fontSizePx": "40px",
+      "lineHeight": "1.15",
+      "letterSpacing": "-0.025em",
+      "fontWeight": "700",
+      "fontFamily": "heading",
+      "usage": "Top-level page titles and primary view headings"
+    },
+    "h2": {
+      "fontSize": "2rem",
+      "fontSizePx": "32px",
+      "lineHeight": "1.2",
+      "letterSpacing": "-0.02em",
+      "fontWeight": "600",
+      "fontFamily": "heading",
+      "usage": "Section headers and primary modular cards"
+    },
+    "h3": {
+      "fontSize": "1.5rem",
+      "fontSizePx": "24px",
+      "lineHeight": "1.25",
+      "letterSpacing": "-0.015em",
+      "fontWeight": "600",
+      "fontFamily": "heading",
+      "usage": "Subsection headers and modal titles"
+    },
+    "h4": {
+      "fontSize": "1.25rem",
+      "fontSizePx": "20px",
+      "lineHeight": "1.3",
+      "letterSpacing": "-0.01em",
+      "fontWeight": "600",
+      "fontFamily": "heading",
+      "usage": "Widget headers and group titles"
+    },
+    "h5": {
+      "fontSize": "1.125rem",
+      "fontSizePx": "18px",
+      "lineHeight": "1.35",
+      "letterSpacing": "-0.005em",
+      "fontWeight": "600",
+      "fontFamily": "heading",
+      "usage": "Card titles and list group headers"
+    },
+    "h6": {
+      "fontSize": "1rem",
+      "fontSizePx": "16px",
+      "lineHeight": "1.4",
+      "letterSpacing": "0",
+      "fontWeight": "600",
+      "fontFamily": "heading",
+      "usage": "Small section titles, badge headers, and field labels"
+    },
+    "body-xl": {
+      "fontSize": "1.25rem",
+      "fontSizePx": "20px",
+      "lineHeight": "1.6",
+      "letterSpacing": "-0.01em",
+      "fontWeight": "400",
+      "fontFamily": "body",
+      "usage": "Hero subheadings and lead introduction paragraphs"
+    },
+    "body-lg": {
+      "fontSize": "1.125rem",
+      "fontSizePx": "18px",
+      "lineHeight": "1.55",
+      "letterSpacing": "0",
+      "fontWeight": "400",
+      "fontFamily": "body",
+      "usage": "Featured descriptions and prominent body copy"
+    },
+    "body-base": {
+      "fontSize": "1rem",
+      "fontSizePx": "16px",
+      "lineHeight": "1.5",
+      "letterSpacing": "0",
+      "fontWeight": "400",
+      "fontFamily": "body",
+      "usage": "Default body text, form inputs, button labels, and table cells"
+    },
+    "body-sm": {
+      "fontSize": "0.875rem",
+      "fontSizePx": "14px",
+      "lineHeight": "1.45",
+      "letterSpacing": "0.005em",
+      "fontWeight": "400",
+      "fontFamily": "body",
+      "usage": "Secondary labels, tooltips, card descriptions, and badges"
+    },
+    "body-xs": {
+      "fontSize": "0.75rem",
+      "fontSizePx": "12px",
+      "lineHeight": "1.4",
+      "letterSpacing": "0.01em",
+      "fontWeight": "500",
+      "fontFamily": "body",
+      "usage": "Captions, timestamps, tags, and micro-copy"
+    }
+  }
+}
+
