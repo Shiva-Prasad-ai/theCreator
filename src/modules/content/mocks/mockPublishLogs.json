@@ -1,0 +1,57 @@
+{
+  "__notice__": "SAMPLE PUBLISHING LOG FIXTURE ONLY - CreatorOS AI Foundation - NOT REAL PUBLISHING RESULTS",
+  "disclaimer": "The publishing entries in this file represent simulated fixture logs for development, testing, and UI verification. No live social media APIs were invoked or updated.",
+  "isSample": true,
+  "logs": [
+    {
+      "id": "log-sim-001",
+      "slotId": "slot-01",
+      "postId": "post-01",
+      "platform": "linkedin",
+      "status": "published_simulated",
+      "scheduledTime": "2026-10-27T03:30:00.000Z",
+      "executedAt": "2026-10-27T03:30:12.000Z",
+      "durationMs": 1420,
+      "workerId": "mock-worker-tilak-01",
+      "externalId": "urn:li:share:sample_72561928419",
+      "details": {
+        "textLength": 420,
+        "mediaType": "image",
+        "mockNotice": "SAMPLE ONLY - Simulated LinkedIn Share Creation"
+      }
+    },
+    {
+      "id": "log-sim-002",
+      "slotId": "slot-02",
+      "postId": "post-02",
+      "platform": "instagram",
+      "status": "scheduled_pending",
+      "scheduledTime": "2026-10-31T07:00:00.000Z",
+      "workerId": "mock-worker-tilak-01",
+      "details": {
+        "containerType": "REELS",
+        "mockNotice": "SAMPLE ONLY - Queued for future background worker trigger"
+      }
+    },
+    {
+      "id": "log-sim-003",
+      "slotId": "slot-03",
+      "postId": "post-03",
+      "platform": "youtube",
+      "status": "failed_simulated",
+      "scheduledTime": "2026-10-29T12:30:00.000Z",
+      "executedAt": "2026-10-29T12:30:45.000Z",
+      "durationMs": 850,
+      "workerId": "mock-worker-tilak-02",
+      "errorCode": "YOUTUBE_OAUTH_TOKEN_EXPIRED",
+      "errorMessage": "Google OAuth2 refresh token expired or revoked. Please re-authenticate YouTube channel.",
+      "retryCount": 2,
+      "maxRetries": 3,
+      "nextRetryAllowed": true,
+      "details": {
+        "httpStatus": 401,
+        "mockNotice": "SAMPLE ONLY - Simulated OAuth token expiration failure log"
+      }
+    }
+  ]
+}

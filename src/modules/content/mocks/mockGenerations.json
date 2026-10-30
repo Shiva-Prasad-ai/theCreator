@@ -1,0 +1,115 @@
+{
+  "__notice__": "SAMPLE FIXTURE ONLY - CreatorOS AI Generations Mock - H3 Contract Shapes",
+  "isSample": true,
+  "caption": {
+    "captions": [
+      {
+        "text": "Microservices almost killed our team velocity. Here is why modular monoliths are quietly winning in 2026 🏗️\n\nWhen you split a codebase before domain boundaries solidify, you don't get decoupling—you get distributed chaos.\n\nKey takeaways:\n1. Boundaries via module encapsulation\n2. Single atomic deployment pipeline\n3. Zero distributed tracing overhead\n\nAre you scaling microservices or consolidating back?",
+        "tone": "Thought Leadership / Technical"
+      },
+      {
+        "text": "The fastest distributed system is the one that isn't distributed.\n\n3 reasons high-growth teams are returning to modular monoliths:\n→ Instant local development setup\n→ Zero eventual consistency bugs\n→ Single repo refactoring speed\n\nBuild clear domain boundaries in code before building network boundaries between servers.",
+        "tone": "Concise & Contrarian"
+      },
+      {
+        "text": "Stop typing 40-character bash commands every 5 minutes ⚡ 3 terminal upgrades that change developer workflow:\n\n1. zoxide (cd on steroids)\n2. fzf (instant fuzzy find)\n3. lazygit (keyboard-only commits)\n\nComment 'TOOLS' and I'll send you my dotfiles config!",
+        "tone": "Dynamic & Helpful"
+      }
+    ]
+  },
+  "script": {
+    "hook": "The single biggest architectural mistake teams make in 2026.",
+    "body": "Here are 3 concrete engineering principles to adopt:\n1. Establish strict interface contracts early.\n2. Use isolated feature buckets to decouple work streams.\n3. Validate boundary states continuously.",
+    "cta": "Save this post and share your team workflow in the comments below."
+  },
+  "hashtags": {
+    "hashtags": [
+      "SoftwareEngineering",
+      "SystemArchitecture",
+      "CleanCode",
+      "Nextjs",
+      "TypeScript",
+      "DeveloperProductivity",
+      "WebDev",
+      "TechCareers"
+    ]
+  },
+  "music": {
+    "suggestions": [
+      {
+        "mood": "Focus / Tech",
+        "genre": "Lo-Fi Electronic",
+        "note": "Clean subtle ambient pulse that sits behind vocal frequencies without masking spoken points."
+      },
+      {
+        "mood": "Inspirational / Deep Dive",
+        "genre": "Minimal Ambient",
+        "note": "Gradual harmonic swell matching high-stakes architectural reveals and technical problem statements."
+      },
+      {
+        "mood": "High Energy / Reel",
+        "genre": "Synthwave",
+        "note": "Punchy 128 BPM electronic cadence for rapid-fire terminal productivity workflows."
+      }
+    ]
+  },
+  "correction": {
+    "corrected": "Microservices almost killed our team velocity. Here is how modular monoliths brought it back in 2026.\n\nKey takeaways:\n1. Encapsulate domain logic within clean module boundaries.\n2. Leverage atomic deployments to eliminate cross-service synchronization delays.\n3. Validate interface contracts continuously.\n\nWhat is your team's biggest velocity bottleneck right now?",
+    "changes": [
+      "Replaced buzzword fluff with concrete engineering terminology.",
+      "Sharpened call-to-action into a focused technical query aligned with creator voice guidelines.",
+      "Enhanced readability by structuring bullet takeaways into action-oriented points."
+    ]
+  },
+  "ideas": {
+    "ideas": [
+      {
+        "title": "Why Interface Contracts Beat Microservices for Early-Stage Speed",
+        "angle": "Examine how premature distributed architectures add network latency and cognitive overhead without scaling benefits."
+      },
+      {
+        "title": "3 Terminal Tools That Quietly Save 30 Minutes Every Single Day",
+        "angle": "Practical workflow breakdown comparing standard shell utilities against modern Rust-based command line tools."
+      },
+      {
+        "title": "Server Components vs Client Components: The Real Mental Model",
+        "angle": "Debunking common misconceptions about React Server Components and Next.js App Router boundary design."
+      }
+    ]
+  },
+  "best_time": {
+    "slots": [
+      {
+        "day": "Tuesday",
+        "time": "10:00 AM",
+        "reason": "Peak engineering feed engagement and lunch-hour desktop reading patterns."
+      },
+      {
+        "day": "Thursday",
+        "time": "02:30 PM",
+        "reason": "High technical thought leadership retention before end-of-week release sprints."
+      },
+      {
+        "day": "Sunday",
+        "time": "06:00 PM",
+        "reason": "Pre-workweek planning window where founders and leads browse architecture case studies."
+      }
+    ],
+    "basis": "heuristic"
+  },
+  "jobs": {
+    "create": {
+      "job_id": "job_mock_pub_001",
+      "status": "queued"
+    },
+    "status": {
+      "status": "completed",
+      "attempts": 1,
+      "result": {
+        "published": true,
+        "platform_post_id": "urn:li:share:7123456789",
+        "published_at": "2026-10-30T10:00:00.000Z"
+      }
+    }
+  }
+}

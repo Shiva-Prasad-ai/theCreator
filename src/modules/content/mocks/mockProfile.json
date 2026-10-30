@@ -1,0 +1,40 @@
+{
+  "__notice__": "SAMPLE FIXTURE ONLY - CreatorOS AI Memory Profile (H3 Contract)",
+  "isSample": true,
+  "persona": "Content Creator",
+  "display_name": "Bhavya",
+  "niche": "Software Architecture, Modern Frontend, AI Developer Workflows",
+  "tone": "Authoritative, concise, engineering-centric, and data-backed",
+  "audience": "Senior developers, tech leads, engineering managers, and technical founders",
+  "goals": "Grow technical authority, publish 3x weekly high-signal architectural breakdowns, build in public",
+  "platforms": [
+    "linkedin",
+    "instagram",
+    "youtube"
+  ],
+  "extras": {
+    "voiceGuidelines": "Never use buzzword fluff or vague motivation. Lead with code principles, architectural tradeoffs, or measurable productivity metrics. Keep hooks punchy (under 12 words). Include concrete bullet points and an engaging technical question in the CTA.",
+    "prohibitedTerms": [
+      "synergy",
+      "paradigm shift",
+      "10x engineer (unironically)",
+      "game changer",
+      "rockstar developer"
+    ],
+    "preferredHooks": [
+      "Microservices almost killed our velocity. Here is how modular monoliths brought it back.",
+      "Stop writing 40-character git commands every 5 minutes.",
+      "Code quality gets you to Senior. Ambiguity navigation gets you to Staff.",
+      "5 Server Component pitfalls that quietly break streaming in Next.js App Router."
+    ],
+    "frequentHashtags": [
+      "SoftwareEngineering",
+      "WebDev",
+      "SystemArchitecture",
+      "Nextjs",
+      "FrontendEngineering",
+      "TechCareers"
+    ]
+  },
+  "profile_hash": "a1b2c3d4e5f67890"
+}

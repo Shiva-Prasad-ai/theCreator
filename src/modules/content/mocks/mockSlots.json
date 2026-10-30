@@ -1,0 +1,298 @@
+{
+  "__notice__": "SAMPLE FIXTURE ONLY - CreatorOS AI Foundation Mock Data - NOT LIVE DATA",
+  "isSample": true,
+  "totalSlots": 12,
+  "slots": [
+    {
+      "id": "slot-01",
+      "slotNumber": 1,
+      "dayOfWeek": "Monday",
+      "defaultTime": "09:00 AM",
+      "targetPlatform": "linkedin",
+      "contentTheme": "System Architecture Deep Dive",
+      "status": "published",
+      "post": {
+        "id": "post-01",
+        "creatorId": "creator-bhavya-01",
+        "title": "Why Modular Monoliths Win in 2026",
+        "contentTheme": "System Architecture Deep Dive",
+        "targetPlatforms": ["linkedin"],
+        "script": {
+          "hook": "Microservices almost killed our velocity. Here is how modular monoliths brought it back.",
+          "body": "Teams often introduce distributed systems before their domain boundaries are understood. In 2026, boundary-enforced monoliths give you 90% of the team autonomy with 0% of network latency overhead.",
+          "callToAction": "Are you scaling microservices or consolidating back? Drop your team setup below.",
+          "estimatedDurationSeconds": 45,
+          "notes": "Target senior software engineers and engineering leads."
+        },
+        "caption": {
+          "text": "Microservices almost killed our team velocity. Here is why modular monoliths are quietly winning in 2026 🏗️\n\nWhen you split a codebase before domain boundaries solidify, you don't get decoupling—you get distributed chaos.\n\nKey takeaways:\n1. Boundaries via module encapsulation\n2. Single atomic deployment pipeline\n3. Zero distributed tracing overhead\n\nAre you scaling microservices or consolidating back?",
+          "tone": "Thought Leadership / Technical",
+          "hashtags": ["SoftwareEngineering", "SystemDesign", "TechArchitecture", "CleanCode"],
+          "characterCount": 420,
+          "language": "en"
+        },
+        "mediaAssets": [
+          {
+            "id": "media-01",
+            "url": "https://sample.creatoros.local/assets/diagram_modular_monolith.png",
+            "thumbnailUrl": "https://sample.creatoros.local/assets/diagram_modular_monolith_thumb.png",
+            "fileName": "diagram_modular_monolith.png",
+            "fileSizeBytes": 1240500,
+            "mimeType": "image/png",
+            "type": "image",
+            "width": 1200,
+            "height": 675
+          }
+        ],
+        "approvalStatus": "approved",
+        "publishingStatus": "published",
+        "scheduledPublishTime": "2026-10-27T03:30:00.000Z",
+        "publishedAt": "2026-10-27T03:30:12.000Z",
+        "createdAt": "2026-10-25T10:00:00.000Z",
+        "updatedAt": "2026-10-27T03:30:15.000Z"
+      }
+    },
+    {
+      "id": "slot-02",
+      "slotNumber": 2,
+      "dayOfWeek": "Tuesday",
+      "defaultTime": "12:30 PM",
+      "targetPlatform": "instagram",
+      "contentTheme": "Dev Setup & Productivity Reel",
+      "status": "ready",
+      "post": {
+        "id": "post-02",
+        "creatorId": "creator-bhavya-01",
+        "title": "3 Terminal Tools That Save Me 5 Hours Weekly",
+        "contentTheme": "Dev Setup & Productivity Reel",
+        "targetPlatforms": ["instagram"],
+        "script": {
+          "hook": "Stop writing 40-character git commands every 5 minutes.",
+          "body": "Showcase zoxide for fuzzy jumping, fzf for history searching, and lazygit for instant terminal visual staging.",
+          "callToAction": "Save this reel for your next dotfiles refresh!",
+          "estimatedDurationSeconds": 30
+        },
+        "caption": {
+          "text": "Stop typing 40-character bash commands every 5 minutes ⚡ 3 terminal upgrades that change developer workflow:\n\n1. zoxide (cd on steroids)\n2. fzf (instant fuzzy find)\n3. lazygit (keyboard-only commits)\n\nComment 'TOOLS' and I'll send you my dotfiles config!",
+          "tone": "Dynamic & Helpful",
+          "hashtags": ["DeveloperLife", "CodingSetup", "WebDev", "TechTools", "Terminal"],
+          "characterCount": 260
+        },
+        "mediaAssets": [
+          {
+            "id": "media-02",
+            "url": "https://sample.creatoros.local/assets/terminal_hacks_reel.mp4",
+            "thumbnailUrl": "https://sample.creatoros.local/assets/terminal_hacks_thumb.png",
+            "fileName": "terminal_hacks_reel.mp4",
+            "fileSizeBytes": 14500000,
+            "mimeType": "video/mp4",
+            "type": "video",
+            "durationSeconds": 29
+          }
+        ],
+        "musicTrack": {
+          "id": "music-01",
+          "title": "Cyber Chill Wave",
+          "artist": "SynthLab",
+          "genre": "Lo-Fi Electronic",
+          "mood": "Focus / Tech",
+          "platformSuitability": ["instagram", "youtube"]
+        },
+        "approvalStatus": "approved",
+        "publishingStatus": "scheduled",
+        "scheduledPublishTime": "2026-10-31T07:00:00.000Z",
+        "createdAt": "2026-10-28T09:15:00.000Z",
+        "updatedAt": "2026-10-29T14:20:00.000Z"
+      }
+    },
+    {
+      "id": "slot-03",
+      "slotNumber": 3,
+      "dayOfWeek": "Wednesday",
+      "defaultTime": "06:00 PM",
+      "targetPlatform": "youtube",
+      "contentTheme": "Deep Dive Short / Video",
+      "status": "failed",
+      "post": {
+        "id": "post-03",
+        "creatorId": "creator-bhavya-01",
+        "title": "TypeScript 5.8 Hidden Gems You Missed",
+        "contentTheme": "Deep Dive Short / Video",
+        "targetPlatforms": ["youtube"],
+        "script": {
+          "hook": "TypeScript 5.8 just solved the most annoying type narrowing problem.",
+          "body": "Walkthrough immutable const assertions and pattern matching refinements.",
+          "callToAction": "Subscribe to stay ahead of modern frontend engineering.",
+          "estimatedDurationSeconds": 55
+        },
+        "caption": {
+          "text": "TypeScript 5.8 just introduced new narrowing capabilities that eliminate boilerplate type guards forever. Watch how to implement them in 60 seconds.",
+          "tone": "Insightful / Educational",
+          "hashtags": ["TypeScript", "FrontendEngineering", "ProgrammingTips", "Shorts"],
+          "characterCount": 165
+        },
+        "mediaAssets": [
+          {
+            "id": "media-03",
+            "url": "https://sample.creatoros.local/assets/ts_gems_short.mp4",
+            "thumbnailUrl": "https://sample.creatoros.local/assets/ts_gems_thumb.png",
+            "fileName": "ts_gems_short.mp4",
+            "fileSizeBytes": 28400000,
+            "mimeType": "video/mp4",
+            "type": "video",
+            "durationSeconds": 58
+          }
+        ],
+        "approvalStatus": "approved",
+        "publishingStatus": "failed",
+        "scheduledPublishTime": "2026-10-29T12:30:00.000Z",
+        "publishingFailure": {
+          "id": "fail-01",
+          "slotId": "slot-03",
+          "platform": "youtube",
+          "errorCode": "YOUTUBE_OAUTH_TOKEN_EXPIRED",
+          "errorMessage": "Google OAuth2 refresh token expired or revoked. Please re-authenticate YouTube channel.",
+          "failedAt": "2026-10-29T12:30:45.000Z",
+          "retryCount": 2,
+          "maxRetries": 3,
+          "suggestedAction": "Reconnect YouTube channel under Integrations settings before retrying publish.",
+          "rawResponse": {
+            "error": "invalid_grant",
+            "error_description": "Token has been expired or revoked"
+          }
+        },
+        "createdAt": "2026-10-27T16:00:00.000Z",
+        "updatedAt": "2026-10-29T12:31:00.000Z"
+      }
+    },
+    {
+      "id": "slot-04",
+      "slotNumber": 4,
+      "dayOfWeek": "Thursday",
+      "defaultTime": "10:00 AM",
+      "targetPlatform": "linkedin",
+      "contentTheme": "Engineering Leadership & Career",
+      "status": "drafted",
+      "post": {
+        "id": "post-04",
+        "creatorId": "creator-bhavya-01",
+        "title": "Junior vs Senior vs Staff Engineer: The Real Difference",
+        "contentTheme": "Engineering Leadership & Career",
+        "targetPlatforms": ["linkedin"],
+        "script": {
+          "hook": "Code quality gets you to Senior. Ambiguity navigation gets you to Staff.",
+          "body": "A breakdown of leverage, cross-team alignment, and technical roadmap stewardship.",
+          "callToAction": "Which shift was the hardest for you to make?",
+          "estimatedDurationSeconds": 40
+        },
+        "caption": {
+          "text": "Code quality gets you to Senior. Ambiguity navigation gets you to Staff.\n\nHere is what changes across engineering milestones:\n\nJunior: Writes code that works\nSenior: Writes code that survives production edge-cases\nStaff: Solves the business problem so well that half the code doesn't need to be written\n\nWhich milestone was your biggest mental shift?",
+          "tone": "Reflective / Mentorship",
+          "hashtags": ["CareerGrowth", "StaffEngineer", "Leadership", "TechCareers"],
+          "characterCount": 355
+        },
+        "mediaAssets": [],
+        "approvalStatus": "pending_review",
+        "publishingStatus": "idle",
+        "createdAt": "2026-10-29T11:00:00.000Z",
+        "updatedAt": "2026-10-30T08:30:00.000Z"
+      }
+    },
+    {
+      "id": "slot-05",
+      "slotNumber": 5,
+      "dayOfWeek": "Friday",
+      "defaultTime": "03:00 PM",
+      "targetPlatform": "instagram",
+      "contentTheme": "Behind the Scenes / Building CreatorOS",
+      "status": "empty"
+    },
+    {
+      "id": "slot-06",
+      "slotNumber": 6,
+      "dayOfWeek": "Saturday",
+      "defaultTime": "11:00 AM",
+      "targetPlatform": "youtube",
+      "contentTheme": "Weekend Coding Tutorial",
+      "status": "empty"
+    },
+    {
+      "id": "slot-07",
+      "slotNumber": 7,
+      "dayOfWeek": "Sunday",
+      "defaultTime": "07:00 PM",
+      "targetPlatform": "linkedin",
+      "contentTheme": "Weekly Tech Recap & Insights",
+      "status": "empty"
+    },
+    {
+      "id": "slot-08",
+      "slotNumber": 8,
+      "dayOfWeek": "Monday",
+      "defaultTime": "09:30 AM",
+      "targetPlatform": "linkedin",
+      "contentTheme": "Next.js App Router Pitfalls",
+      "status": "drafted",
+      "post": {
+        "id": "post-08",
+        "creatorId": "creator-bhavya-01",
+        "title": "5 Server Component Mistakes You Are Still Making",
+        "contentTheme": "Next.js App Router Pitfalls",
+        "targetPlatforms": ["linkedin"],
+        "script": {
+          "hook": "You are passing client state down into server components and breaking streaming.",
+          "body": "Explain composition patterns, slot patterns, and keeping client boundaries at the leaves.",
+          "callToAction": "Drop your favorite Next.js tip in the comments.",
+          "estimatedDurationSeconds": 50
+        },
+        "caption": {
+          "text": "5 Server Component pitfalls that quietly break streaming in Next.js App Router:\n\n1. Pushing 'use client' too high in the tree\n2. Over-fetching in leaf components\n3. Missing Suspense fallback boundaries\n\nKeep client components at the leaves for maximum performance.",
+          "tone": "Educational / Direct",
+          "hashtags": ["Nextjs", "React", "WebPerformance", "FrontendArchitecture"],
+          "characterCount": 275
+        },
+        "mediaAssets": [],
+        "approvalStatus": "draft",
+        "publishingStatus": "idle",
+        "createdAt": "2026-10-30T09:00:00.000Z",
+        "updatedAt": "2026-10-30T09:10:00.000Z"
+      }
+    },
+    {
+      "id": "slot-09",
+      "slotNumber": 9,
+      "dayOfWeek": "Tuesday",
+      "defaultTime": "01:00 PM",
+      "targetPlatform": "instagram",
+      "contentTheme": "Quick Tech Carousel",
+      "status": "empty"
+    },
+    {
+      "id": "slot-10",
+      "slotNumber": 10,
+      "dayOfWeek": "Wednesday",
+      "defaultTime": "05:00 PM",
+      "targetPlatform": "youtube",
+      "contentTheme": "AI Agent Architecture Breakdown",
+      "status": "empty"
+    },
+    {
+      "id": "slot-11",
+      "slotNumber": 11,
+      "dayOfWeek": "Thursday",
+      "defaultTime": "10:30 AM",
+      "targetPlatform": "linkedin",
+      "contentTheme": "Frontend State Management 2026",
+      "status": "empty"
+    },
+    {
+      "id": "slot-12",
+      "slotNumber": 12,
+      "dayOfWeek": "Friday",
+      "defaultTime": "04:00 PM",
+      "targetPlatform": "instagram",
+      "contentTheme": "Tech Humor / Friday Meme Reel",
+      "status": "empty"
+    }
+  ]
+}
