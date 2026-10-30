@@ -1,0 +1,23 @@
+# CreatorOS AI - Code Ownership
+# Rules: At least one designated reviewer required for all PRs
+
+# Default fallback owner
+* @shiva
+
+# Shiva: core, auth, schema, shell, deploy
+/app/ @shiva
+/components/ @shiva
+/lib/supabase/ @shiva
+/supabase/ @shiva
+/docs/ @shiva
+next.config.ts @shiva
+package.json @shiva
+
+# Bhavya: Bucket and publishing
+/components/publishing/ @bhavya
+/lib/bucket/ @bhavya
+
+# Tilak: server and gateway
+/lib/gateway/ @tilak
+/backend/ @tilak
+/mock_ai_service/ @tilak
