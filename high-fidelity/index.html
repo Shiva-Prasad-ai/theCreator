@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreatorOS AI — High-Fidelity Experience (H9 Prototype)</title>
+  
+  <!-- High-Fidelity Stylesheets mapped to H2 Design System -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/screens.css">
+</head>
+<body>
+  <div class="hf-app-container">
+    
+    <!-- Top Global SaaS Header -->
+    <header class="hf-header">
+      <div class="hf-header-inner">
+        <!-- Brand Logo -->
+        <a href="#" class="hf-brand" title="CreatorOS AI">
+          <svg class="hf-logo-svg" viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="nav-cosmic" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#7C3AED"/>
+                <stop offset="50%" stop-color="#9061F9"/>
+                <stop offset="100%" stop-color="#22D3EE"/>
+              </linearGradient>
+              <linearGradient id="nav-cyan" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#0891B2"/>
+                <stop offset="70%" stop-color="#22D3EE"/>
+                <stop offset="100%" stop-color="#A5F3FC"/>
+              </linearGradient>
+            </defs>
+            <g transform="translate(6, 4)">
+              <circle cx="36" cy="36" r="26" fill="#7C3AED" opacity="0.18" />
+              <path d="M 58 22 C 53 13 43 9 34 9 C 20 9 9 21 9 36 C 9 51 20 63 34 63 C 45 63 54 57 59 47" stroke="url(#nav-cosmic)" stroke-width="5.5" stroke-linecap="round" />
+              <path d="M 47 24 C 42 19 34 19 30 20 C 22 23 16 29 16 37 C 16 44 22 51 30 53 C 38 55 46 51 51 43" stroke="url(#nav-cyan)" stroke-width="4" stroke-linecap="round" />
+              <path d="M 41 36 L 36.5 32 L 32 36 L 36.5 40 Z" fill="#22D3EE" />
+              <circle cx="36.5" cy="36" r="2" fill="#FFFFFF" />
+            </g>
+            <text x="88" y="47" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="28" fill="#F8FAFC" letter-spacing="-0.5">Creator<tspan fill="#22D3EE">OS</tspan></text>
+            <rect x="236" y="27" width="34" height="20" rx="4" fill="rgba(124, 58, 237, 0.25)" stroke="#7C3AED" stroke-width="1.2"/>
+            <text x="245" y="41" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="11" fill="#DDD6FE">AI</text>
+          </svg>
+        </a>
+
+        <!-- Flow Switcher Pills -->
+        <nav class="hf-flow-switcher" aria-label="Workflow Mode">
+          <button class="hf-flow-pill active" data-flow="onboarding" type="button">Onboarding User Flow</button>
+          <button class="hf-flow-pill" data-flow="content-bucket" type="button">Content Bucket Pipeline</button>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="hf-header-actions">
+          <button class="hf-btn hf-btn-ghost hf-btn-sm" type="button" onclick="resetPrototypeStorage()" title="Reset mock state back to default 7/12 filled slots">
+            ↺ Reset Demo State
+          </button>
+          <div class="hf-user-pill">
+            <div class="hf-avatar-circle">AR</div>
+            <span>@alexrivera_ai</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Workflow Stepper Bar -->
+    <div class="hf-stepper-bar">
+      <div class="hf-stepper-inner">
+        <div class="hf-stepper-top">
+          <div class="hf-stepper-info">
+            <span class="hf-flow-eyebrow" id="flowEyebrow">Onboarding Flow</span>
+            <span style="color: var(--border-default);">•</span>
+            <h1 class="hf-screen-heading" id="screenHeading">Welcome Screen</h1>
+          </div>
+          <span class="hf-screen-counter" id="stepCounter">Screen 1 of 6</span>
+        </div>
+
+        <!-- Glowing Multi-Segment Progress Bar -->
+        <div class="hf-progress-track" id="progressBar">
+          <!-- Dynamically populated by renderCurrentScreen() -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Workspace Content -->
+    <main class="hf-main-content">
+
+      <!-- ====================================================================
+           FLOW 1: ONBOARDING SCREENS (1 - 6)
+           ==================================================================== -->
+
+      <!-- Screen ONB-1: Welcome Screen -->
+      <section class="hf-screen-view" id="screen-onboarding-1">
+        <div class="hf-card hf-welcome-hero">
+          <div class="hf-welcome-logo-badge">
+            <span class="hf-badge hf-badge-memory" style="font-size: 11px; padding: 5px 12px;">CodeMeet 2026 Preview</span>
+          </div>
+          <h2 class="hf-hero-title">Supercharge Your Autonomous Creator Business</h2>
+          <p class="hf-hero-subtitle">
+            CreatorOS AI plans, drafts, aligns, and coordinates your multi-platform content calendar with audience telemetry and built-in human creative sovereignty.
+          </p>
+
+          <div class="hf-feature-strip">
+            <div class="hf-feature-pill">
+              <div class="hf-feature-num">01</div>
+              <div class="hf-feature-text">Persona Setup</div>
+            </div>
+            <div class="hf-feature-pill">
+              <div class="hf-feature-num">02</div>
+              <div class="hf-feature-text">Brand Channels</div>
+            </div>
+            <div class="hf-feature-pill">
+              <div class="hf-feature-num">03</div>
+              <div class="hf-feature-text">Audience Niche</div>
+            </div>
+            <div class="hf-feature-pill">
+              <div class="hf-feature-num">04</div>
+              <div class="hf-feature-text">Content Bucket</div>
+            </div>
+          </div>
+
+          <button class="hf-btn hf-btn-primary hf-btn-lg" type="button" onclick="nextStep()" style="font-size: 15px;">
+            Get Started • ~2 Minutes Setup →
+          </button>
+        </div>
+      </section>
+
+      <!-- Screen ONB-2: Creator Persona Selection -->
+      <section class="hf-screen-view" id="screen-onboarding-2">
+        <div class="hf-card">
+          <div class="hf-screen-intro">
+            <div class="screen-eyebrow">Onboarding • Step 02 of 06</div>
+            <h2 class="screen-title">Select Your Creator Persona</h2>
+            <p class="screen-desc">Tailors workspace defaults, voice calibration, and autonomous repurposing pipelines to your production scale.</p>
+          </div>
+
+          <div class="hf-grid-4">
+            <div class="hf-select-card persona-card selected" onclick="selectPersona(this, 'solo-creator')">
+              <div class="hf-select-card-icon">🚀</div>
+              <div class="hf-select-card-title">Solo Creator</div>
+              <div class="hf-select-card-desc">Independent operator optimizing script pacing, single-operator leverage, and rapid calendar generation.</div>
+            </div>
+
+            <div class="hf-select-card persona-card" onclick="selectPersona(this, 'studio-agency')">
+              <div class="hf-select-card-icon">🏢</div>
+              <div class="hf-select-card-title">Creator Studio</div>
+              <div class="hf-select-card-desc">Media agency or collective managing multiple client brands, approval tiers, and high-volume dispatch.</div>
+            </div>
+
+            <div class="hf-select-card persona-card" onclick="selectPersona(this, 'educator-coach')">
+              <div class="hf-select-card-icon">🎓</div>
+              <div class="hf-select-card-title">Educator / Coach</div>
+              <div class="hf-select-card-desc">Course creators translating longform masterclasses into bite-sized actionable lessons.</div>
+            </div>
+
+            <div class="hf-select-card persona-card" onclick="selectPersona(this, 'brand-influencer')">
+              <div class="hf-select-card-icon">🛍️</div>
+              <div class="hf-select-card-title">Brand Influencer</div>
+              <div class="hf-select-card-desc">Sponsorship-focused creator requiring telemetry media kits, brand partnership decks, and live metrics.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screen ONB-3: Profile Setup -->
+      <section class="hf-screen-view" id="screen-onboarding-3">
+        <div class="hf-card">
+          <div class="hf-screen-intro">
+            <div class="screen-eyebrow">Onboarding • Step 03 of 06</div>
+            <h2 class="screen-title">Creator Profile & Primary Channels</h2>
+            <p class="screen-desc">Configure your primary handle, display identity, and brand presence.</p>
+          </div>
+
+          <div class="hf-grid-2">
+            <div>
+              <div class="hf-form-group">
+                <label class="hf-label" for="inputDisplayName">
+                  <span>Display Name</span>
+                  <span class="hf-required-badge">*Required</span>
+                </label>
+                <input type="text" id="inputDisplayName" class="hf-input" value="Alex Rivera" placeholder="e.g. Alex Rivera">
+              </div>
+
+              <div class="hf-form-group">
+                <label class="hf-label" for="inputHandle">
+                  <span>Creator Handle</span>
+                  <span class="hf-required-badge">*Required</span>
+                </label>
+                <input type="text" id="inputHandle" class="hf-input" value="@alexrivera_ai" placeholder="e.g. @yourname">
+              </div>
+
+              <div class="hf-form-group">
+                <label class="hf-label">Primary Distribution Channel</label>
+                <div class="hf-platform-radio-group">
+                  <div class="hf-platform-radio-card selected" onclick="selectPlatform(this, 'YouTube')">
+                    <div style="font-weight: 700; font-size: 13px;">YouTube</div>
+                    <div style="font-size: 10px; color: var(--text-muted);">Long / Shorts</div>
+                  </div>
+                  <div class="hf-platform-radio-card" onclick="selectPlatform(this, 'LinkedIn')">
+                    <div style="font-weight: 700; font-size: 13px;">LinkedIn</div>
+                    <div style="font-size: 10px; color: var(--text-muted);">Text / Media</div>
+                  </div>
+                  <div class="hf-platform-radio-card" onclick="selectPlatform(this, 'Instagram')">
+                    <div style="font-weight: 700; font-size: 13px;">Instagram</div>
+                    <div style="font-size: 10px; color: var(--text-muted);">Reels / Carousels</div>
+                  </div>
+                  <div class="hf-platform-radio-card" onclick="selectPlatform(this, 'TikTok')">
+                    <div style="font-weight: 700; font-size: 13px;">TikTok</div>
+                    <div style="font-size: 10px; color: var(--text-muted);">Shortform</div>
+                  </div>
+                  <div class="hf-platform-radio-card" onclick="selectPlatform(this, 'X')">
+                    <div style="font-weight: 700; font-size: 13px;">X</div>
+                    <div style="font-size: 10px; color: var(--text-muted);">Threads</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Avatar Dropzone -->
+            <div>
+              <div class="hf-form-group">
+                <label class="hf-label">Creator Profile Picture</label>
+                <div class="hf-avatar-dropzone" onclick="alert('Avatar uploader: Prototype simulated attachment.')">
+                  <div class="hf-avatar-preview">AR</div>
+                  <div>
+                    <div style="font-weight: 600; font-size: 13px;">Drop image file or click to upload</div>
+                    <div style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">PNG, JPG, WebP • Up to 5 MB</div>
+                    <span class="hf-badge hf-badge-verified" style="margin-top: 6px;">Sample Attached: alex_rivera.jpg</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screen ONB-4: Niche & Target Audience -->
+      <section class="hf-screen-view" id="screen-onboarding-4">
+        <div class="hf-card">
+          <div class="hf-screen-intro">
+            <div class="screen-eyebrow">Onboarding • Step 04 of 06</div>
+            <h2 class="screen-title">Niche & Audience Sophistication</h2>
+            <p class="screen-desc">Calibrates vocabulary depth, hook pattern interrupts, and audience retention framing.</p>
+          </div>
+
+          <div class="hf-grid-2">
+            <div>
+              <div class="hf-form-group">
+                <label class="hf-label" for="inputNiche">Creator Domain Niche</label>
+                <select id="inputNiche" class="hf-select">
+                  <option value="Tech & AI Software" selected>Tech & AI Software</option>
+                  <option value="Creator Economy & SaaS">Creator Economy & SaaS</option>
+                  <option value="Finance & Wealth Building">Finance & Wealth Building</option>
+                  <option value="Design & Creative Direction">Design & Creative Direction</option>
+                </select>
+              </div>
+
+              <div class="hf-form-group">
+                <label class="hf-label">Sub-Topic Keyword Signals (Click to toggle)</label>
+                <div class="hf-chips-cloud">
+                  <span class="hf-chip selected" onclick="toggleChip(this, 'AI Coding')">AI Coding</span>
+                  <span class="hf-chip selected" onclick="toggleChip(this, 'SaaS Growth')">SaaS Growth</span>
+                  <span class="hf-chip selected" onclick="toggleChip(this, 'Prompt Engineering')">Prompt Engineering</span>
+                  <span class="hf-chip" onclick="toggleChip(this, 'Next.js 15')">Next.js 15</span>
+                  <span class="hf-chip" onclick="toggleChip(this, 'Multi-Agent Workflows')">Multi-Agent Workflows</span>
+                  <span class="hf-chip" onclick="toggleChip(this, 'Indie Hacking')">Indie Hacking</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="hf-form-group">
+                <label class="hf-label">Audience Sophistication Level</label>
+                <div class="hf-grid-3">
+                  <div class="hf-select-card" style="padding: var(--space-4); text-align: center;" onclick="this.parentElement.querySelectorAll('.hf-select-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
+                    <div style="font-weight: 700; font-size: 13px;">Beginner</div>
+                    <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Foundational concepts, jargon-free analogies.</div>
+                  </div>
+                  <div class="hf-select-card selected" style="padding: var(--space-4); text-align: center;" onclick="this.parentElement.querySelectorAll('.hf-select-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
+                    <div style="font-weight: 700; font-size: 13px;">Intermediate</div>
+                    <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Industry terminology, practical implementation.</div>
+                  </div>
+                  <div class="hf-select-card" style="padding: var(--space-4); text-align: center;" onclick="this.parentElement.querySelectorAll('.hf-select-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
+                    <div style="font-weight: 700; font-size: 13px;">Advanced</div>
+                    <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Deep technical breakdowns, architectural proofs.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screen ONB-5: Creator Goals -->
+      <section class="hf-screen-view" id="screen-onboarding-5">
+        <div class="hf-card">
+          <div class="hf-screen-intro">
+            <div class="screen-eyebrow">Onboarding • Step 05 of 06</div>
+            <h2 class="screen-title">Growth & Monetization Goals</h2>
+            <p class="screen-desc">Select the primary business outcomes you want CreatorOS AI to prioritize.</p>
+          </div>
+
+          <div class="hf-grid-4">
+            <div class="hf-select-card selected" onclick="selectGoal(this, 'Monetization Velocity')">
+              <div class="hf-select-card-icon">⚡</div>
+              <div class="hf-select-card-title">Monetization Velocity</div>
+              <div class="hf-select-card-desc">Sponsorship conversions, programmatic media kit telemetry, and revenue generation.</div>
+            </div>
+
+            <div class="hf-select-card selected" onclick="selectGoal(this, 'AI Script Drafting')">
+              <div class="hf-select-card-icon">✍️</div>
+              <div class="hf-select-card-title">AI Script Drafting</div>
+              <div class="hf-select-card-desc">Generate high-retention hooks, retention-checked value delivery, and viral callouts.</div>
+            </div>
+
+            <div class="hf-select-card selected" onclick="selectGoal(this, 'Cross-Platform Repurposing')">
+              <div class="hf-select-card-icon">🔄</div>
+              <div class="hf-select-card-title">Cross-Platform Sync</div>
+              <div class="hf-select-card-desc">Synchronized adaptation from longform video into vertical reels, threads, and newsletters.</div>
+            </div>
+
+            <div class="hf-select-card" onclick="selectGoal(this, 'Audience Retention Modeling')">
+              <div class="hf-select-card-icon">📊</div>
+              <div class="hf-select-card-title">Retention Analytics</div>
+              <div class="hf-select-card-desc">Real-time pacing calibration, drop-off reduction, and pattern-interrupt signals.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screen ONB-6: Confirmation Manifest -->
+      <section class="hf-screen-view" id="screen-onboarding-6">
+        <div class="hf-card">
+          <div class="hf-screen-intro">
+            <div class="screen-eyebrow">Onboarding • Step 06 of 06</div>
+            <h2 class="screen-title">Workspace Configuration Manifest</h2>
+            <p class="screen-desc">Review your verified creator workspace parameters prior to launching the Content Bucket repository.</p>
+          </div>
+
+          <div class="hf-manifest-card">
+            <div class="hf-manifest-row">
+              <span class="hf-manifest-label">Selected Persona</span>
+              <span class="hf-manifest-value" id="summaryPersona">Solo Content Creator</span>
+            </div>
+            <div class="hf-manifest-row">
+              <span class="hf-manifest-label">Creator Identity</span>
+              <span class="hf-manifest-value" id="summaryProfile">Alex Rivera (@alexrivera_ai) • Primary: YouTube</span>
+            </div>
+            <div class="hf-manifest-row">
+              <span class="hf-manifest-label">Domain Niche</span>
+              <span class="hf-manifest-value" id="summaryNiche">Tech & AI Software [AI Coding, SaaS Growth, Prompt Engineering]</span>
+            </div>
+            <div class="hf-manifest-row">
+              <span class="hf-manifest-label">Prioritized Goals</span>
+              <span class="hf-manifest-value" id="summaryGoals">Monetization Velocity • AI Script Drafting • Cross-Platform Sync</span>
+            </div>
+          </div>
+
+          <div style="margin-top: var(--space-6); text-align: center;">
+            <button class="hf-btn hf-btn-accent hf-btn-lg" type="button" onclick="switchFlow('content-bucket');" style="font-size: 15px;">
+              Launch Creator Workspace & Open Content Bucket 🚀
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           FLOW 2: CONFIRMED CONTENT BUCKET SCREENS (1 - 6)
+           ==================================================================== -->
+
+      <!-- Screen BKT-1: 12-Slot Overview & Progress -->
+      <section class="hf-screen-view" id="screen-content-bucket-1">
+        <div class="hf-card">
+          <div class="hf-screen-intro">
+            <div class="screen-eyebrow">Confirmed Workflow • Bhavya Architecture</div>
+            <h2 class="screen-title">Content Bucket Repository (12 Slots)</h2>
+            <p class="screen-desc">Central 12-slot staging repository for video, reel, and idea assets. Partial bucket scheduling is fully supported.</p>
+          </div>
+
+          <!-- Capacity Meter -->
+          <div class="hf-bucket-meter">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span style="font-weight: 600; font-size: 13px; display: flex; align-items: center; gap: 8px;">
+                <span>Bucket Capacity</span>
+                <span class="hf-badge hf-badge-sample">Local Prototype State</span>
+              </span>
+              <span id="meterText" style="font-family: var(--font-mono); font-size: 12px; color: var(--accent-cyan); font-weight: 700;">
+                7 / 12 Slots Filled (Partial Bucket Scheduling is Valid)
+              </span>
+            </div>
+            <div class="hf-meter-track">
+              <div id="meterFill" class="hf-meter-fill" style="width: 58.3%;"></div>
+            </div>
+          </div>
+
+          <!-- Quick Action Toolbar -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4);">
+            <div style="font-size: 13px; color: var(--text-muted);">
+              Select any slot below to edit its asset format, script, captions, or scheduling.
+            </div>
+            <div style="display: flex; gap: var(--space-2);">
+              <button class="hf-btn hf-btn-ghost hf-btn-sm" type="button" onclick="resetPrototypeStorage()">
+                ↺ Reset Slots Demo
+              </button>
+              <button class="hf-btn hf-btn-primary hf-btn-sm" type="button" onclick="navigateToStep(2)">
+                + Edit Selected Slot →
+              </button>
+            </div>
+          </div>
+
+          <!-- 12-Slot Visual Grid -->
+          <div id="slotGrid12" class="hf-slot-grid-12">
+            <!-- Dynamically populated by render12SlotGrid() in app.js -->
+          </div>
+
+          <div class="hf-annotation-card">
+            <span class="hf-annotation-badge">Confirmed Rule</span>
+            <div>
+              <strong>12-Slot Maximum & Partial Bucket Validity:</strong> Maximum 12 slots per bucket. A partial bucket (e.g. 7/12 filled) is valid and can be scheduled without waiting for all 12 slots to be populated.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screen BKT-2: Add Video / Reel / Idea -->
+      <section class="hf-screen-view" id="screen-content-bucket-2">
+        <div class="hf-card">
+          <div class="hf-screen-intro">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <div class="screen-eyebrow">Content Bucket • Step 02 of 06</div>
+              <span id="bkt2ActiveSlotBadge" class="hf-badge hf-badge-memory">Editing Slot 1 of 12</span>
+            </div>
+            <h2 class="screen-title">Add Content: Video, Reel, or Idea</h2>
+            <p class="screen-desc">Assign media format and working title to the current Content Bucket slot.</p>
+          </div>
+
+          <!-- Slot Working Title Input -->
+          <div class="hf-form-group">
+            <label class="hf-label" for="bkt2SlotTitle">
+              <span>Slot Working Title</span>
+              <span class="hf-required-badge">*Required</span>
+            </label>
+            <input type="text" id="bkt2SlotTitle" class="hf-input" placeholder="e.g. Stop Hand-Crafting Hooks in 2026" oninput="updateSlotTitleFromInput(this.value)">
+            <span class="hf-hint">Internal reference title for this slot in the Content Bucket grid.</span>
+          </div>
+
+          <!-- Format Selection Cards -->
+          <div class="hf-form-group">
+            <label class="hf-label">Select Slot Content Format</label>
+            <div class="hf-grid-3">
+              <div class="hf-select-card bkt2-format-card selected" data-type="video" onclick="selectSlotFormat(this, 'video')">
+                <div class="hf-select-card-icon">🎬</div>
+                <div class="hf-select-card-title">Longform Video</div>
+                <div class="hf-select-card-desc">16:9 Landscape master footage for YouTube or deep dives.</div>
+              </div>
+
+              <div class="hf-select-card bkt2-format-card" data-type="reel" onclick="selectSlotFormat(this, 'reel')">
+                <div class="hf-select-card-icon">📱</div>
+                <div class="hf-select-card-title">Shortform Reel / Short</div>
+                <div class="hf-select-card-desc">9:16 Vertical video for Instagram Reels, Shorts, or TikTok.</div>
+              </div>
+
+              <div class="hf-select-card bkt2-format-card" data-type="idea" onclick="selectSlotFormat(this, 'idea')">
+                <div class="hf-select-card-icon">💡</div>
+                <div class="hf-select-card-title">Idea Note / Text Post</div>
+                <div class="hf-select-card-desc">Script-first concept or text-based hook for LinkedIn or carousels.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Simulated Dropzone -->
+          <div class="hf-avatar-dropzone" style="justify-content: center; text-align: center; padding: var(--space-8); flex-direction: column;">
+            <div style="font-size: 36px; margin-bottom: 4px;">📹</div>
+            <div style="font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: var(--text-primary);">
+              Simulated Media Asset Ingestion
+            </div>
+            <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px; max-width: 480px;">
+              Demonstration wireframe: Ingests mock video metadata. No live video bytes are stored or transferred.
+            </p>
+            <div style="margin-top: 10px;">
+              <span class="hf-badge hf-badge-verified">Sample Attached: slot_asset_master.mp4 [File size, format, duration: Pending Team Confirmation]</span>
+            </div>
+          </div>
+
+          <div class="hf-annotation-card">
+            <span class="hf-annotation-badge">Unconfirmed Assumptions</span>
+            <div>
+              <strong>Technical Limits Pending Team Confirmation:</strong> (1) Upload formats (MP4, MOV, WebM). (2) File size limits (e.g. 500MB vs 2GB). (3) Maximum video duration limits. None of these are hardcoded as platform facts.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screen BKT-3: Mandatory Script Input -->
+      <section class="hf-screen-view" id="screen-content-bucket-3">
+        <div class="hf-card">
+          <div class="hf-screen-intro">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <div class="screen-eyebrow">Content Bucket • Step 03 of 06</div>
+              <span id="bkt3ActiveSlotBadge" class="hf-badge hf-badge-memory">Slot 1: Stop Hand-Crafting Hooks</span>
+            </div>
+            <h2 class="screen-title">Mandatory Script Input</h2>
+            <p class="screen-desc">Every post requires a script. A post cannot advance to captions, review, or scheduling without a valid script.</p>
+          </div>
+
+          <!-- Visible Error Banner for Missing Script -->
+          <div id="scriptValidationBanner" class="hf-banner-error" role="alert">
+            <span style="font-size: 18px;">⚠️</span>
+            <div>
+              <strong>Validation Error: Every post requires a script.</strong><br>
+              A post cannot advance to captions, review, or scheduling without a script. Please enter your script below.
+            </div>
+          </div>
+
+          <div class="hf-grid-2">
+            <!-- Left: Script Editor -->
+            <div>
+              <div class="hf-form-group">
+                <label class="hf-label" for="scriptInput">
+                  <span>Video / Content Script</span>
+                  <span class="hf-required-badge">*Required</span>
+                </label>
+                <div class="hf-script-editor-container">
+                  <div class="hf-editor-toolbar">
+                    <span>SCRIPT EDITOR • UTF-8</span>
+                    <span id="scriptReqStatus" style="font-weight: 700; color: #10B981;">Script Provided (Valid)</span>
+                  </div>
+                  <textarea id="scriptInput" class="hf-script-textarea" placeholder="Write or paste your full video script, voiceover transcript, or post content here..."></textarea>
+                </div>
+                <span class="hf-hint">
+                  A script is required before advancing. (Note: Specific internal section breakdown e.g. Hook / Core / CTA is pending team confirmation).
+                </span>
+              </div>
+
+              <!-- Optional Section Breakdown Guide -->
+              <details style="border: 1px solid var(--border-default); border-radius: var(--radius-md); padding: var(--space-3); background: var(--bg-surface-subtle);">
+                <summary style="font-size: 12px; font-weight: 600; cursor: pointer; color: var(--accent-cyan);">
+                  Optional Structuring Guide: Hook • Key Points • CTA [Pending Team Confirmation]
+                </summary>
+                <div style="margin-top: var(--space-3); display: flex; flex-direction: column; gap: var(--space-2);">
+                  <div>
+                    <label class="hf-label" for="scriptHookInput" style="font-size: 11px;">Opening Hook (Optional Guide)</label>
+                    <input type="text" id="scriptHookInput" class="hf-input" style="font-size: 12px;" placeholder="Pattern interrupt or opening hook...">
+                  </div>
+                  <div>
+                    <label class="hf-label" for="scriptBodyInput" style="font-size: 11px;">Key Value Points (Optional Guide)</label>
+                    <textarea id="scriptBodyInput" class="hf-textarea" style="min-height: 60px; font-size: 12px;" placeholder="Core breakdown or insight..."></textarea>
+                  </div>
+                  <div>
+                    <label class="hf-label" for="scriptCtaInput" style="font-size: 11px;">Call to Action (Optional Guide)</label>
+                    <input type="text" id="scriptCtaInput" class="hf-input" style="font-size: 12px;" placeholder="Closing CTA or comment prompt...">
+                  </div>
+                </div>
+              </details>
+            </div>
+
+            <!-- Right: Telemetry & Gate Enforcement Status -->
+            <div>
+              <div class="hf-telemetry-card">
+                <div style="font-family: var(--font-heading); font-size: 14px; font-weight: 700; margin-bottom: var(--space-2); color: var(--accent-cyan);">
+                  Script Pacing Telemetry
+                </div>
+                <div class="hf-telemetry-row">
+                  <span style="color: var(--text-muted);">Total Word Count:</span>
+                  <span id="scriptWordCount" style="font-family: var(--font-mono); font-weight: 700;">0 Words</span>
+                </div>
+                <div class="hf-telemetry-row">
+                  <span style="color: var(--text-muted);">Estimated Spoken Pace:</span>
+                  <span id="scriptPaceEstimate" style="font-family: var(--font-mono); font-weight: 700;">~0 Seconds [Sample estimate]</span>
+                </div>
+                <div class="hf-telemetry-row">
+                  <span style="color: var(--text-muted);">Pacing Calibration:</span>
+                  <span style="font-family: var(--font-mono); font-weight: 600; color: var(--accent-cyan);">~138 WPM [Sample Pace]</span>
+                </div>
+              </div>
+
+              <div class="hf-annotation-card" style="margin-top: var(--space-4);">
+                <span class="hf-annotation-badge">Confirmed Rule</span>
+                <div>
+                  <strong>Mandatory Script Gate:</strong> A script is required before advancing to Step 4 (Captions), Step 5 (Approval), or Step 6 (Scheduling). You can return to earlier screens at any time to revise content.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screen BKT-4: Caption Editing & AI Correction -->
+      <section class="hf-screen-view" id="screen-content-bucket-4">
+        <div class="hf-card">
+          <div class="hf-screen-intro">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <div class="screen-eyebrow">Content Bucket • Step 04 of 06</div>
+              <span id="bkt4ActiveSlotBadge" class="hf-badge hf-badge-memory">Slot 1: Stop Hand-Crafting Hooks</span>
+            </div>
+            <h2 class="screen-title">Caption Editing & AI Correction</h2>
+            <p class="screen-desc">Captions are synthesized from your script and voice profile. Edit freely or apply style correction.</p>
+          </div>
+
+          <div class="hf-grid-2">
+            <!-- Left: Editable Caption -->
+            <div>
+              <div class="hf-form-group">
+                <div class="hf-label">
+                  <span>Social Post Caption (Manual Editing Enabled)</span>
+                  <span id="captionStyleBadge" class="hf-badge hf-badge-ai">Sample • AI-suggested</span>
+                </div>
+                <textarea id="captionInput" class="hf-textarea" style="min-height: 140px;" placeholder="AI-suggested caption appears here..."></textarea>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+                  <span class="hf-hint">Character counts [Per-platform character limits pending team confirmation]</span>
+                  <button class="hf-btn hf-btn-secondary hf-btn-sm" type="button" onclick="applyAiCorrection()">
+                    ✨ AI Correction (Apply Creator Style)
+                  </button>
+                </div>
+              </div>
+
+              <!-- Suggested Hashtags -->
+              <div class="hf-form-group" style="margin-top: var(--space-4);">
+                <div class="hf-label">
+                  <span>Suggested Hashtags</span>
+                  <span class="hf-badge hf-badge-sample">AI-suggested</span>
+                </div>
+                <div id="hashtagChipsList" class="hf-chips-cloud" style="margin-top: 6px;">
+                  <!-- Populated by renderHashtagsList(slot) -->
+                </div>
+                <span class="hf-hint" style="margin-top: 4px; display: block;">Click to toggle inclusion. Labeled as AI-suggested (never called trending without verified trend data).</span>
+              </div>
+            </div>
+
+            <!-- Right: Extras & Audio Ideas -->
+            <div>
+              <div class="hf-telemetry-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-2);">
+                  <span style="font-family: var(--font-heading); font-size: 14px; font-weight: 700;">Music & Audio Ideas</span>
+                  <span class="hf-badge hf-badge-sample">AI-suggested</span>
+                </div>
+                <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 6px;">
+                  Suggested audio pairing based on script pacing:
+                </div>
+                <div id="musicIdeaDisplay" style="background: var(--bg-surface-subtle); border: 1px solid var(--border-default); padding: 10px 12px; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 12px; color: var(--accent-cyan); margin-bottom: 6px;">
+                  Atmospheric Synthwave (120 BPM) [AI-suggested - Unverified Trend Data]
+                </div>
+                <div style="font-size: 11px; color: var(--text-subtle);">
+                  ⚠️ Transparency Notice: Never labeled "trending" without live verified platform telemetry.
+                </div>
+              </div>
+
+              <div class="hf-annotation-card" style="margin-top: var(--space-4);">
+                <span class="hf-annotation-badge">Transparency Guarantee</span>
+                <div>
+                  All simulated AI outputs are explicitly labeled <code>Sample</code> and <code>AI-suggested</code>. Shows "Served from memory" strictly when derived from stored creator profile memory.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screen BKT-5: Consolidated Review & Human Approval -->
+      <section class="hf-screen-view" id="screen-content-bucket-5">
+        <div class="hf-card">
+          <div class="hf-screen-intro">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <div class="screen-eyebrow">Content Bucket • Step 05 of 06</div>
+              <span id="revSlotBadge" class="hf-badge hf-badge-memory">Slot 1 of 12 • Format: VIDEO</span>
+            </div>
+            <h2 class="screen-title">Single-Pane Review & Human Approval</h2>
+            <p class="screen-desc">Inspect stored slot data (script, media, captions, status) and grant mandatory human approval prior to scheduling.</p>
+          </div>
+
+          <div class="hf-grid-2">
+            <!-- Left: Stored Slot Metadata -->
+            <div>
+              <div class="hf-telemetry-card" style="display: flex; flex-direction: column; gap: var(--space-3);">
+                <div>
+                  <div style="font-size: 11px; color: var(--text-subtle); margin-bottom: 2px;">SLOT TITLE</div>
+                  <div id="revTitle" style="font-family: var(--font-heading); font-size: 15px; font-weight: 700; color: var(--text-primary);">
+                    Stop Hand-Crafting Hooks in 2026
+                  </div>
+                </div>
+
+                <div>
+                  <div style="font-size: 11px; color: var(--text-subtle); margin-bottom: 2px;">STORED SCRIPT (MANDATORY)</div>
+                  <div id="revHook" style="font-size: 13px; color: var(--text-muted); font-style: italic; line-height: 1.4;">
+                    "Stop wasting 10 hours writing and recording video hooks by hand in 2026..."
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+                    <span style="font-size: 11px; color: var(--text-subtle);">STORED CAPTION</span>
+                    <span id="revCaptionSourceBadge" class="hf-badge hf-badge-ai">Sample • AI-suggested</span>
+                  </div>
+                  <div id="revCaption" style="font-size: 13px; color: var(--text-primary); line-height: 1.4;">
+                    Tired of the creator burnout cycle? Here is how autonomous AI pipelines 10x your content output without sacrificing creative control. 🚀
+                  </div>
+                </div>
+
+                <div>
+                  <div style="font-size: 11px; color: var(--text-subtle); margin-bottom: 2px;">SUGGESTED AUDIO PAIRING</div>
+                  <div id="revMusic" style="font-family: var(--font-mono); font-size: 12px; color: var(--accent-cyan);">
+                    Atmospheric Synthwave (120 BPM)
+                  </div>
+                </div>
+              </div>
+
+              <div style="font-size: 12px; color: var(--text-subtle); display: flex; align-items: center; gap: 6px; margin-top: var(--space-3);">
+                <span class="hf-badge hf-badge-sample">Local Prototype State</span>
+                <span>Slot package preserved in browser local storage demo.</span>
+              </div>
+            </div>
+
+            <!-- Right: Mandatory Human Approval Panel -->
+            <div>
+              <div class="hf-approval-box">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-3);">
+                  <div style="font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: var(--text-primary);">
+                    Mandatory Human Approval Gate
+                  </div>
+                  <span id="approvalStatusBadge" class="hf-status-pill approved">Human Approved ✓</span>
+                </div>
+                <p style="font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-bottom: var(--space-4);">
+                  CreatorOS AI enforces strict human creative sovereignty: Content is never scheduled or dispatched automatically without explicit creator sign-off.
+                </p>
+
+                <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; background: var(--bg-surface-elevated); padding: var(--space-3); border-radius: var(--radius-md); border: 1px solid var(--border-default);">
+                  <input type="checkbox" id="humanApprovalCheckbox" style="margin-top: 3px; accent-color: var(--primary-violet); width: 18px; height: 18px;" onchange="toggleHumanApproval(this.checked)">
+                  <div>
+                    <div style="font-size: 13px; font-weight: 600; color: var(--text-primary);">
+                      I explicitly approve this script and caption package for dispatch
+                    </div>
+                    <div style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">
+                      Strictly required to unlock scheduling in Screen BKT-6.
+                    </div>
+                  </div>
+                </label>
+              </div>
+
+              <div class="hf-annotation-card">
+                <span class="hf-annotation-badge">Confirmed Rule</span>
+                <div>
+                  <strong>Human-in-the-Loop Constraint:</strong> Never auto-publish without human approval. The approval gate ensures creators retain final editorial sovereignty.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screen BKT-6: Scheduling & Truthful Publishing -->
+      <section class="hf-screen-view" id="screen-content-bucket-6">
+        <div class="hf-card">
+          <div class="hf-screen-intro">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <div class="screen-eyebrow">Content Bucket • Step 06 of 06</div>
+              <span id="schedSlotBadge" class="hf-badge hf-badge-memory">Slot 1: Stop Hand-Crafting Hooks</span>
+            </div>
+            <h2 class="screen-title">Scheduling & Truthful Publishing</h2>
+            <p class="screen-desc">Select publish date and time. Actual scheduling is handled by a separate agent with truthful status reporting.</p>
+          </div>
+
+          <div class="hf-grid-2">
+            <!-- Left: Confirmed Platform Scope & Time Selection -->
+            <div>
+              <div class="hf-form-group">
+                <label class="hf-label">Confirmed Platform Destinations (Bhavya Scope)</label>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                  <label class="hf-select-card" style="flex-direction: row; align-items: center; padding: 10px 14px; cursor: pointer;">
+                    <input type="checkbox" checked style="accent-color: var(--accent-cyan);">
+                    <div style="flex: 1;">
+                      <div style="font-weight: 600; font-size: 13px;">LinkedIn (@alexrivera_ai)</div>
+                      <div style="font-size: 11px; color: var(--text-muted);">Real posting planned first</div>
+                    </div>
+                    <span class="hf-badge hf-badge-verified">Planned Priority 1</span>
+                  </label>
+
+                  <label class="hf-select-card" style="flex-direction: row; align-items: center; padding: 10px 14px; cursor: pointer;">
+                    <input type="checkbox" checked style="accent-color: var(--accent-cyan);">
+                    <div style="flex: 1;">
+                      <div style="font-weight: 600; font-size: 13px;">Instagram Reels (@alexrivera_ai)</div>
+                      <div style="font-size: 11px; color: var(--text-muted);">Real posting for team accounts; requires public video URL</div>
+                    </div>
+                    <span class="hf-badge hf-badge-sample">Reels URL</span>
+                  </label>
+
+                  <label class="hf-select-card" style="flex-direction: row; align-items: center; padding: 10px 14px; cursor: pointer;">
+                    <input type="checkbox" checked style="accent-color: var(--accent-cyan);">
+                    <div style="flex: 1;">
+                      <div style="font-weight: 600; font-size: 13px;">YouTube (@alexrivera_ai)</div>
+                      <div style="font-size: 11px; color: var(--text-muted);">Upload as "Private, pending audit" (YouTube policy)</div>
+                    </div>
+                    <span class="hf-badge hf-badge-sample">Private Audit</span>
+                  </label>
+
+                  <label class="hf-select-card" style="flex-direction: row; align-items: center; padding: 10px 14px; cursor: pointer;">
+                    <input type="checkbox" style="accent-color: var(--accent-cyan);">
+                    <div style="flex: 1;">
+                      <div style="font-weight: 600; font-size: 13px;">TikTok (@alexrivera_ai)</div>
+                      <div style="font-size: 11px; color: var(--text-muted);">Draft/private only, if time permits</div>
+                    </div>
+                    <span class="hf-badge hf-badge-sample">Draft Only</span>
+                  </label>
+                </div>
+
+                <!-- Exclusion Banner for X -->
+                <div style="margin-top: 8px; font-size: 11px; color: var(--text-subtle); display: flex; align-items: center; gap: 6px;">
+                  <span style="color: #EF4444; font-weight: 700;">✕ Excluded:</span>
+                  <span>X (Twitter) is explicitly excluded from Content Bucket scope.</span>
+                </div>
+              </div>
+
+              <!-- Date & Time Pickers -->
+              <div class="hf-grid-2">
+                <div class="hf-form-group">
+                  <label class="hf-label" for="schedDateInput">Publish Date</label>
+                  <input type="date" id="schedDateInput" class="hf-input" value="2026-11-04">
+                </div>
+                <div class="hf-form-group">
+                  <label class="hf-label" for="schedTimeInput">
+                    <span>Publish Time</span>
+                    <span class="hf-badge hf-badge-memory">IST (Provisional)</span>
+                  </label>
+                  <input type="time" id="schedTimeInput" class="hf-input" value="17:30">
+                </div>
+              </div>
+              <span class="hf-hint" style="margin-top: -6px; display: block; margin-bottom: 12px;">
+                Provisional timezone: Indian Standard Time (IST, UTC+05:30) [Pending Team Confirmation].
+              </span>
+            </div>
+
+            <!-- Right: Schedule Dispatch Action & Truthful Publishing Cards -->
+            <div>
+              <div class="hf-telemetry-card" style="margin-bottom: var(--space-4);">
+                <div style="font-family: var(--font-heading); font-size: 14px; font-weight: 700; margin-bottom: 6px; color: var(--accent-cyan);">
+                  ⚡ Dispatch Coordination
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); line-height: 1.4; margin-bottom: 12px;">
+                  Real scheduling is handled by a separate agent. Never auto-publishes without human approval.
+                </p>
+
+                <div id="schedApprovalCheckNote" style="display: none; background: rgba(245, 158, 11, 0.1); border: 1px solid #F59E0B; padding: 8px 12px; border-radius: var(--radius-sm); font-size: 12px; color: #FCD34D; margin-bottom: 12px;">
+                  ⚠️ Note: This slot has not received explicit Human Approval in Screen BKT-5.
+                </div>
+
+                <label style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; cursor: pointer;">
+                  <input type="checkbox" id="schedExplicitApproveCheck" style="accent-color: var(--accent-cyan);">
+                  <span style="font-size: 12px; color: var(--text-primary); font-weight: 500;">
+                    I confirm the proposed schedule time and dispatch parameters
+                  </span>
+                </label>
+
+                <button class="hf-btn hf-btn-accent hf-btn-lg" style="width: 100%; font-size: 14px;" type="button" onclick="simulatePublishDemonstration()">
+                  Confirm Proposed Schedule (Approved) 🚀
+                </button>
+              </div>
+
+              <!-- Truthful Status Demonstration Cards (Never displays "Live") -->
+              <div>
+                <div style="font-size: 11px; font-weight: 700; color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">
+                  Truth in Publishing: Real Demonstration States
+                </div>
+                <div class="hf-publish-grid">
+                  <!-- State 1: Scheduled -->
+                  <div class="hf-publish-state-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <span class="hf-slot-num">STATE 1</span>
+                      <span class="hf-status-pill scheduled">Scheduled</span>
+                    </div>
+                    <div style="font-size: 12px; font-weight: 600;">Pending Agent Dispatch</div>
+                    <div style="font-size: 11px; color: var(--text-muted);">Awaiting scheduled dispatch window (17:30 IST provisional).</div>
+                  </div>
+
+                  <!-- State 2: Publishing -->
+                  <div class="hf-publish-state-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <span class="hf-slot-num">STATE 2</span>
+                      <span class="hf-status-pill ready">Publishing</span>
+                    </div>
+                    <div style="font-size: 12px; font-weight: 600;">Transient Dispatch</div>
+                    <div style="font-size: 11px; color: var(--text-muted);">Simulated uploading and destination webhook handshake.</div>
+                  </div>
+
+                  <!-- State 3: Posted (Sample) -->
+                  <div class="hf-publish-state-card posted">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <span class="hf-slot-num">STATE 3</span>
+                      <span class="hf-status-pill posted">Posted (Sample)</span>
+                    </div>
+                    <div style="font-size: 12px; font-weight: 600;">Private, Pending Audit</div>
+                    <div style="font-size: 11px; color: var(--text-muted);">Uploaded with audit visibility. Never labeled public or live without confirmation.</div>
+                  </div>
+
+                  <!-- State 4: Failed with Retry (Demonstrating Success & Failure Outcomes with Preserved History) -->
+                  <div class="hf-publish-state-card failed">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <span class="hf-slot-num">STATE 4</span>
+                      <span class="hf-status-pill failed" id="demoFailedStatusPill">Failed (Sample)</span>
+                    </div>
+                    <div style="font-size: 12px; font-weight: 600;" id="demoFailedStatusText">Sample Failure: OAuth Token Expired</div>
+                    <div style="font-size: 11px; color: #FCA5A5;" id="demoFailedErrorDetail">Simulated dispatch error (Code 401: OAuth token expired).</div>
+
+                    <!-- Simulated Retry in Progress Indicator -->
+                    <div id="retryInProgressBanner" style="display: none; background: rgba(34, 211, 238, 0.12); border: 1px solid var(--accent-cyan); padding: 8px 10px; border-radius: var(--radius-sm); font-size: 11px; color: var(--accent-cyan); margin-top: 6px;">
+                      ⏳ Simulated retry in progress... Re-verifying simulated tokens and handshakes...
+                    </div>
+
+                    <!-- Retry Actions: Demonstrates Both Outcomes -->
+                    <div id="retryActionButtons" style="display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap;">
+                      <button id="retrySuccessBtn" class="hf-btn hf-btn-secondary hf-btn-sm" type="button" style="flex: 1; font-size: 11px;" onclick="simulateRetryWithOutcome('success')">
+                        ↻ Test Sample Success
+                      </button>
+                      <button id="retryFailBtn" class="hf-btn hf-btn-danger-outline hf-btn-sm" type="button" style="flex: 1; font-size: 11px;" onclick="simulateRetryWithOutcome('failure')">
+                        ↻ Test Sample Failure
+                      </button>
+                    </div>
+
+                    <!-- Preserved Attempt History Log -->
+                    <div style="margin-top: 8px; border-top: 1px dashed var(--border-subtle); padding-top: 6px;">
+                      <div style="font-size: 10px; font-family: var(--font-mono); color: var(--text-subtle); text-transform: uppercase; margin-bottom: 4px;">
+                        Preserved Demo Attempt History:
+                      </div>
+                      <div id="retryHistoryList" style="display: flex; flex-direction: column; gap: 4px; font-size: 11px; font-family: var(--font-mono);">
+                        <!-- Populated dynamically by renderRetryHistory(slot) in app.js -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hf-annotation-card">
+            <span class="hf-annotation-badge">Unconfirmed Assumptions</span>
+            <div>
+              <strong>Open Technical Questions:</strong> (1) Simultaneous vs sequential multi-platform dispatch strategy. (2) Definite timezone support. (3) Token refresh retry backoff policies. None of these are hardcoded as facts.
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Sticky Bottom Action Footer -->
+    <footer class="hf-footer-bar">
+      <div class="hf-footer-inner">
+        <button class="hf-btn hf-btn-ghost action-back" type="button" onclick="prevStep()">
+          ← Previous
+        </button>
+        <button class="hf-btn hf-btn-primary action-next" type="button" onclick="nextStep()">
+          Next Screen →
+        </button>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
