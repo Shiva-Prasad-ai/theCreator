@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreatorOS AI — H5 Wireframe Prototype (Onboarding & Content Bucket)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="../design-system/assets/logo-mark.svg">
+</head>
+<body>
+
+  <!-- Wireframe Blueprint Grid Overlay -->
+  <div class="wireframe-grid-bg"></div>
+
+  <!-- Prototype Header & Flow Controller -->
+  <header class="proto-header">
+    <div class="container proto-nav-row">
+      <div class="proto-brand">
+        <!-- Embedded Mini Logo Mark -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="30" height="30" fill="none">
+          <circle cx="40" cy="40" r="28" fill="#7C3AED" opacity="0.25" />
+          <path d="M 64 24 C 58 14 47 10 38 10 C 22 10 10 23 10 40 C 10 57 22 70 38 70 C 50 70 60 63 65 52" stroke="#7C3AED" stroke-width="6" stroke-linecap="round" />
+          <path d="M 52 26 C 46 20 38 20 33 22 C 24 25 18 32 18 41 C 18 49 24 57 33 59 C 42 61 51 56 56 47" stroke="#22D3EE" stroke-width="4.5" stroke-linecap="round" />
+          <circle cx="41" cy="40" r="3" fill="#22D3EE" />
+        </svg>
+        <span class="proto-logo-badge">Creator<span>OS</span> AI</span>
+        <span class="proto-tag">H5 Wireframes</span>
+      </div>
+
+      <!-- Flow Switcher -->
+      <nav class="proto-flow-tabs" aria-label="Prototype Flows">
+        <button class="proto-tab-btn active" data-flow="onboarding">
+          1. Onboarding Flow (6 Screens)
+        </button>
+        <button class="proto-tab-btn" data-flow="content-bucket">
+          2. Content Bucket Flow (6 Screens)
+        </button>
+      </nav>
+
+      <!-- Right Controls -->
+      <div class="proto-controls-right">
+        <label class="proto-toggle-annotations" title="Toggle UX Notes and Bhavya's Technical Assumptions">
+          <input type="checkbox" id="toggleAnnotations" checked>
+          <span>Show Assumptions & Notes</span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Wireframe Prototype Stage -->
+  <main class="container wireframe-canvas">
+
+    <!-- Step Progress & Metadata Block -->
+    <div class="wireframe-step-header">
+      <div class="wireframe-meta-row">
+        <span class="wireframe-flow-title" id="flowTitle">Onboarding User Flow • Welcome Screen</span>
+        <span class="wireframe-step-counter" id="stepCounter">Screen 1 of 6</span>
+      </div>
+      <!-- Interactive Step Bar -->
+      <div class="wireframe-progress-bar" id="progressBar">
+        <!-- Rendered via app.js -->
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         FLOW 1: ONBOARDING WIREFRAME SCREENS (1 - 6)
+         ==================================================================== -->
+
+    <!-- Screen ONB-1: Welcome Screen -->
+    <section class="wireframe-screen-view" id="screen-onboarding-1" style="display: none;">
+      <div class="wireframe-screen-card">
+        <div class="wireframe-screen-intro">
+          <div class="screen-eyebrow">Wireframe Screen 01 • Onboarding</div>
+          <h1 class="screen-title">Welcome to CreatorOS AI</h1>
+          <p class="screen-desc">The Autonomous Operating System for High-Velocity Digital Creators.</p>
+        </div>
+
+        <div class="wireframe-body">
+          <div class="wf-box" style="text-align: center; padding: 40px 24px; max-width: 680px; margin: 0 auto;">
+            <div style="font-family: var(--font-heading); font-size: 20px; font-weight: 700; margin-bottom: 8px;">
+              Ready to automate your content engine?
+            </div>
+            <p style="color: var(--text-muted); font-size: 14px; max-width: 520px; margin: 0 auto 24px;">
+              Over the next 2 minutes, we will configure your AI creator persona, target niche, monetization focus, and multi-platform distribution channels.
+            </p>
+
+            <div class="wf-grid-3" style="margin-bottom: 24px; text-align: left;">
+              <div class="wf-box">
+                <div style="font-family: var(--font-mono); font-size: 11px; color: var(--accent-cyan); margin-bottom: 4px;">01. PERSONA</div>
+                <div style="font-size: 13px; font-weight: 600;">Tailored AI Copilot</div>
+              </div>
+              <div class="wf-box">
+                <div style="font-family: var(--font-mono); font-size: 11px; color: var(--accent-cyan); margin-bottom: 4px;">02. NICHE</div>
+                <div style="font-size: 13px; font-weight: 600;">Audience Targeting</div>
+              </div>
+              <div class="wf-box">
+                <div style="font-family: var(--font-mono); font-size: 11px; color: var(--accent-cyan); margin-bottom: 4px;">03. PIPELINE</div>
+                <div style="font-size: 13px; font-weight: 600;">Content Bucket Sync</div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-lg" onclick="nextStep()" style="font-size: 15px;">
+              Begin Setup Flow →
+            </button>
+          </div>
+
+          <div class="wf-annotation-box">
+            <span class="wf-annotation-badge">UX Spec</span>
+            <div class="wf-annotation-text">
+              <strong>Onboarding Entry Principle:</strong> Low cognitive friction. Provides explicit time commitment expectations (~2 minutes) and outlines the 4 core steps before requiring any input.
+            </div>
+          </div>
+        </div>
+
+        <div class="wireframe-actions">
+          <button class="btn btn-ghost action-back" onclick="prevStep()" disabled>← Previous</button>
+          <button class="btn btn-primary action-next" onclick="nextStep()">Next Screen →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen ONB-2: Creator Persona Selection -->
+    <section class="wireframe-screen-view" id="screen-onboarding-2" style="display: none;">
+      <div class="wireframe-screen-card">
+        <div class="wireframe-screen-intro">
+          <div class="screen-eyebrow">Wireframe Screen 02 • Onboarding</div>
+          <h2 class="screen-title">Choose Your Creator Archetype</h2>
+          <p class="screen-desc">Select the persona that best reflects your current production scale and business model.</p>
+        </div>
+
+        <div class="wireframe-body">
+          <div class="wf-grid-2" style="margin-bottom: 16px;">
+            <!-- Persona 1 -->
+            <div class="wf-select-card persona-card selected" onclick="selectPersona(this, 'solo-creator')">
+              <div class="card-icon">01</div>
+              <div class="card-title">Solo Content Creator</div>
+              <div class="card-desc">Individual creator looking to automate scripting, ideation, and multi-platform video repurposing independently.</div>
+            </div>
+
+            <!-- Persona 2 -->
+            <div class="wf-select-card persona-card" onclick="selectPersona(this, 'studio-agency')">
+              <div class="card-icon">02</div>
+              <div class="card-title">Creator Studio / Media Agency</div>
+              <div class="card-desc">Managing multiple creator brands, content teams, client approvals, and centralized distribution pipelines.</div>
+            </div>
+
+            <!-- Persona 3 -->
+            <div class="wf-select-card persona-card" onclick="selectPersona(this, 'educator-coach')">
+              <div class="card-icon">03</div>
+              <div class="card-title">Educator / Course Creator</div>
+              <div class="card-desc">Building educational cohorts, structured tutorials, paid communities, and instructional breakdowns.</div>
+            </div>
+
+            <!-- Persona 4 -->
+            <div class="wf-select-card persona-card" onclick="selectPersona(this, 'brand-influencer')">
+              <div class="card-icon">04</div>
+              <div class="card-title">E-Commerce / Brand Influencer</div>
+              <div class="card-desc">Directing organic social audience traffic toward digital products, Shopify stores, and affiliate revenue.</div>
+            </div>
+          </div>
+
+          <div class="wf-annotation-box">
+            <span class="wf-annotation-badge">Assumption: Bhavya Review</span>
+            <div class="wf-annotation-text">
+              <strong>Technical Assumption:</strong> Selecting "Studio / Agency" will conditionally unlock multi-tenant workspace permissions and team invite steps in the production backend schema.
+            </div>
+          </div>
+        </div>
+
+        <div class="wireframe-actions">
+          <button class="btn btn-ghost action-back" onclick="prevStep()">← Previous</button>
+          <button class="btn btn-primary action-next" onclick="nextStep()">Next Screen →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen ONB-3: Creator Profile Setup -->
+    <section class="wireframe-screen-view" id="screen-onboarding-3" style="display: none;">
+      <div class="wireframe-screen-card">
+        <div class="wireframe-screen-intro">
+          <div class="screen-eyebrow">Wireframe Screen 03 • Onboarding</div>
+          <h2 class="screen-title">Setup Your Creator Identity</h2>
+          <p class="screen-desc">Configure your public identity and connect your primary content distribution channel.</p>
+        </div>
+
+        <div class="wireframe-body">
+          <div class="wf-grid-2">
+            <!-- Left: Form inputs -->
+            <div>
+              <div class="wf-form-group">
+                <label class="wf-label">
+                  Display Name <span class="required-badge">*Required</span>
+                </label>
+                <input type="text" class="wf-input" id="inputDisplayName" value="Alex Rivera" placeholder="e.g. Alex Rivera">
+              </div>
+
+              <div class="wf-form-group">
+                <label class="wf-label">
+                  Creator Handle / Workspace URL <span class="required-badge">*Required</span>
+                </label>
+                <input type="text" class="wf-input" id="inputHandle" value="@alexrivera_ai" placeholder="e.g. @yourname">
+                <span class="wf-hint">Public workspace URL: creatoros.ai/alexrivera_ai</span>
+              </div>
+
+              <div class="wf-form-group">
+                <label class="wf-label">Primary Distribution Platform</label>
+                <select class="wf-select" id="inputPrimaryPlatform">
+                  <option value="YouTube" selected>YouTube / YouTube Shorts</option>
+                  <option value="TikTok">TikTok</option>
+                  <option value="Instagram">Instagram (Reels & Feed)</option>
+                  <option value="X">X (Twitter)</option>
+                  <option value="LinkedIn">LinkedIn Video</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Right: Avatar / Brand Assets Placeholder -->
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+              <div class="wf-box-dashed">
+                <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--surface-elevated); border: 2px dashed var(--surface-border-dashed); margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--text-muted); font-family: var(--font-mono);">
+                  AVATAR
+                </div>
+                <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">Upload Brand Avatar</div>
+                <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">Recommended: 400x400 PNG, JPG or WebP (Max 5MB)</p>
+                <button class="btn btn-secondary btn-sm" type="button">[Upload Image]</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="wf-annotation-box">
+            <span class="wf-annotation-badge">UX Spec</span>
+            <div class="wf-annotation-text">
+              <strong>Social Handle Validation:</strong> Client-side regex checks handle availability asynchronously. Platform select pre-configures initial video aspect ratios (9:16 vertical vs 16:9 widescreen).
+            </div>
+          </div>
+        </div>
+
+        <div class="wireframe-actions">
+          <button class="btn btn-ghost action-back" onclick="prevStep()">← Previous</button>
+          <button class="btn btn-primary action-next" onclick="nextStep()">Next Screen →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen ONB-4: Niche & Target Audience -->
+    <section class="wireframe-screen-view" id="screen-onboarding-4" style="display: none;">
+      <div class="wireframe-screen-card">
+        <div class="wireframe-screen-intro">
+          <div class="screen-eyebrow">Wireframe Screen 04 • Onboarding</div>
+          <h2 class="screen-title">Define Niche & Audience Context</h2>
+          <p class="screen-desc">CreatorOS AI uses these parameters to calibrate script vocabulary, hook intensity, and audience retention modeling.</p>
+        </div>
+
+        <div class="wireframe-body">
+          <div class="wf-form-group">
+            <label class="wf-label">Primary Industry / Creator Niche</label>
+            <select class="wf-select" id="inputNiche">
+              <option value="Tech & AI Software" selected>Artificial Intelligence & Software Engineering</option>
+              <option value="SaaS & Startups">SaaS, Venture & Bootstrapping</option>
+              <option value="Finance & Crypto">Personal Finance & Investing</option>
+              <option value="Design & Creative">Design Systems & 3D Creative Tech</option>
+              <option value="Fitness & Health">High-Performance Health & Longevity</option>
+              <option value="Other">Custom Niche</option>
+            </select>
+          </div>
+
+          <div class="wf-form-group">
+            <label class="wf-label">Sub-Topics & Keyword Pillars (Click to select)</label>
+            <div class="wf-chips-grid">
+              <span class="wf-chip selected" onclick="toggleChip(this, 'AI Coding')">AI Coding Tools</span>
+              <span class="wf-chip selected" onclick="toggleChip(this, 'SaaS Growth')">SaaS Growth Playbooks</span>
+              <span class="wf-chip selected" onclick="toggleChip(this, 'Prompt Engineering')">Prompt Engineering</span>
+              <span class="wf-chip" onclick="toggleChip(this, 'Next.js & React')">Next.js & React</span>
+              <span class="wf-chip" onclick="toggleChip(this, 'Autonomous Agents')">Autonomous Agents</span>
+              <span class="wf-chip" onclick="toggleChip(this, 'Monetization')">Digital Products</span>
+              <span class="wf-chip" onclick="toggleChip(this, 'Figma to Code')">Figma to Code</span>
+            </div>
+          </div>
+
+          <div class="wf-form-group">
+            <label class="wf-label">Target Audience Sophistication Level</label>
+            <div class="wf-grid-3">
+              <div class="wf-box" style="cursor: pointer; border-color: var(--surface-border);">
+                <div style="font-weight: 600; font-size: 13px;">Beginner</div>
+                <div style="font-size: 11px; color: var(--text-muted);">Jargon-free, accessible, foundational</div>
+              </div>
+              <div class="wf-box" style="cursor: pointer; border-color: var(--accent-cyan); background: rgba(34, 211, 238, 0.05);">
+                <div style="font-weight: 600; font-size: 13px; color: var(--accent-cyan);">Intermediate</div>
+                <div style="font-size: 11px; color: var(--text-muted);">Industry familiar, tactical, actionable</div>
+              </div>
+              <div class="wf-box" style="cursor: pointer; border-color: var(--surface-border);">
+                <div style="font-weight: 600; font-size: 13px;">Advanced / Pro</div>
+                <div style="font-size: 11px; color: var(--text-muted);">Deep technical, metrics, architecture</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wf-annotation-box">
+            <span class="wf-annotation-badge">Assumption: Bhavya Review</span>
+            <div class="wf-annotation-text">
+              <strong>LLM Context Injection:</strong> Selected subtopics and audience level will populate the system prompt for all downstream LLM agent generations (Content Bucket Screen 4).
+            </div>
+          </div>
+        </div>
+
+        <div class="wireframe-actions">
+          <button class="btn btn-ghost action-back" onclick="prevStep()">← Previous</button>
+          <button class="btn btn-primary action-next" onclick="nextStep()">Next Screen →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen ONB-5: Creator Goals -->
+    <section class="wireframe-screen-view" id="screen-onboarding-5" style="display: none;">
+      <div class="wireframe-screen-card">
+        <div class="wireframe-screen-intro">
+          <div class="screen-eyebrow">Wireframe Screen 05 • Onboarding</div>
+          <h2 class="screen-title">Set Your 90-Day Creator Objectives</h2>
+          <p class="screen-desc">Select the primary outcomes you want CreatorOS AI to optimize for.</p>
+        </div>
+
+        <div class="wireframe-body">
+          <div class="wf-grid-2">
+            <!-- Goal 1 -->
+            <div class="wf-select-card selected" onclick="selectGoal(this, 'Monetization Velocity')">
+              <div class="card-icon">01</div>
+              <div class="card-title">Monetization Velocity</div>
+              <div class="card-desc">Maximize sponsorship revenue, high-ticket digital product conversions, and paid community signups.</div>
+            </div>
+
+            <!-- Goal 2 -->
+            <div class="wf-select-card selected" onclick="selectGoal(this, 'AI Script Drafting')">
+              <div class="card-icon">02</div>
+              <div class="card-title">AI Script Drafting & Hooks</div>
+              <div class="card-desc">Accelerate pre-production with AI viral hooks, retention-tested script frameworks, and B-roll guidance.</div>
+            </div>
+
+            <!-- Goal 3 -->
+            <div class="wf-select-card selected" onclick="selectGoal(this, 'Cross-Platform Repurposing')">
+              <div class="card-icon">03</div>
+              <div class="card-title">Cross-Platform Distribution</div>
+              <div class="card-desc">Automatically adapt single master videos into optimized YouTube Shorts, TikTok clips, and Instagram Reels.</div>
+            </div>
+
+            <!-- Goal 4 -->
+            <div class="wf-select-card" onclick="selectGoal(this, 'Audience Analytics')">
+              <div class="card-icon">04</div>
+              <div class="card-title">Audience Intelligence & Retention</div>
+              <div class="card-desc">Identify video drop-off patterns, viral engagement spikes, and high-converting subscriber segments.</div>
+            </div>
+          </div>
+
+          <div class="wf-annotation-box">
+            <span class="wf-annotation-badge">UX Spec</span>
+            <div class="wf-annotation-text">
+              <strong>Multi-Select Capability:</strong> Creators can select up to 3 primary goals. The dashboard home widgets and telemetry prioritize metrics based on these selections.
+            </div>
+          </div>
+        </div>
+
+        <div class="wireframe-actions">
+          <button class="btn btn-ghost action-back" onclick="prevStep()">← Previous</button>
+          <button class="btn btn-primary action-next" onclick="nextStep()">Next Screen →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen ONB-6: Setup Confirmation -->
+    <section class="wireframe-screen-view" id="screen-onboarding-6" style="display: none;">
+      <div class="wireframe-screen-card">
+        <div class="wireframe-screen-intro">
+          <div class="screen-eyebrow">Wireframe Screen 06 • Onboarding Confirmation</div>
+          <h2 class="screen-title">Setup Summary & Provisioning</h2>
+          <p class="screen-desc">Verify your configuration before launching your autonomous CreatorOS AI environment.</p>
+        </div>
+
+        <div class="wireframe-body">
+          <div class="wf-box" style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 1px solid var(--surface-border); padding-bottom: 12px;">
+              <div>
+                <span class="proto-tag" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #34D399;">Ready to Deploy</span>
+                <span style="font-family: var(--font-heading); font-size: 16px; font-weight: 700; margin-left: 8px;">Workspace Configuration</span>
+              </div>
+              <button class="btn btn-ghost btn-sm" onclick="setCurrentStep(2)" style="font-size: 12px;">[Edit All]</button>
+            </div>
+
+            <div class="wf-grid-2" style="gap: 16px;">
+              <div>
+                <div style="font-size: 12px; color: var(--text-subtle); margin-bottom: 2px;">CREATOR ARCHETYPE</div>
+                <div style="font-weight: 600;" id="summaryPersona">Solo Content Creator</div>
+              </div>
+
+              <div>
+                <div style="font-size: 12px; color: var(--text-subtle); margin-bottom: 2px;">PROFILE & PRIMARY PLATFORM</div>
+                <div style="font-weight: 600;" id="summaryProfile">Alex Rivera (@alexrivera_ai) • YouTube</div>
+              </div>
+
+              <div>
+                <div style="font-size: 12px; color: var(--text-subtle); margin-bottom: 2px;">NICHE & KEYWORDS</div>
+                <div style="font-weight: 600;" id="summaryNiche">Tech & AI Software [AI Coding, SaaS Growth]</div>
+              </div>
+
+              <div>
+                <div style="font-size: 12px; color: var(--text-subtle); margin-bottom: 2px;">PRIORITY OBJECTIVES</div>
+                <div style="font-weight: 600;" id="summaryGoals">Monetization Velocity • AI Script Drafting</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center; padding: 12px 0;">
+            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">
+              Clicking below initializes your AI content pipeline and takes you to the Content Bucket overview.
+            </p>
+            <button class="btn btn-accent btn-lg" onclick="switchFlow('content-bucket')" style="font-size: 15px;">
+              Launch CreatorOS Workspace & Go to Content Bucket →
+            </button>
+          </div>
+
+          <div class="wf-annotation-box">
+            <span class="wf-annotation-badge">Assumption: Bhavya Review</span>
+            <div class="wf-annotation-text">
+              <strong>Backend Provisioning:</strong> On submit, POST `/api/v1/onboarding/complete` commits creator metadata and initializes user bucket schema with default platform presets.
+            </div>
+          </div>
+        </div>
+
+        <div class="wireframe-actions">
+          <button class="btn btn-ghost action-back" onclick="prevStep()">← Previous</button>
+          <button class="btn btn-accent action-next" onclick="switchFlow('content-bucket')">Launch CreatorOS Workspace</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FLOW 2: CONTENT BUCKET WIREFRAME SCREENS (1 - 6)
+         ==================================================================== -->
+
+    <!-- Screen BUCKET-1: Overview & 12-Slot Visual Grid -->
+    <section class="wireframe-screen-view" id="screen-content-bucket-1" style="display: none;">
+      <div class="wireframe-screen-card">
+        <div class="wireframe-screen-intro">
+          <div class="screen-eyebrow">Wireframe Screen 01 • Confirmed Content Bucket Workflow</div>
+          <h2 class="screen-title">Content Bucket Overview & 12-Slot Grid</h2>
+          <p class="screen-desc">Central 12-slot staging repository for video, reel, and idea assets. Partial bucket scheduling is fully supported.</p>
+        </div>
+
+        <div class="wireframe-body">
+          <!-- Bucket Capacity Meter (Confirmed 12 Slots Max) -->
+          <div class="wf-bucket-meter" style="margin-bottom: var(--space-4);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <span style="font-size: 13px; font-weight: 600; color: var(--text-primary); display: flex; align-items: center; gap: 6px;">
+                <span>Bucket Capacity:</span>
+                <span class="wf-trust-badge sample">Local Prototype State</span>
+              </span>
+              <span id="meterText" style="font-family: var(--font-mono); font-size: 12px; color: var(--accent-cyan); font-weight: 600;">7 / 12 Slots Filled (Partial Bucket Scheduling is Valid)</span>
+            </div>
+            <div class="wf-meter-track">
+              <div id="meterFill" class="wf-meter-fill" style="width: 58.3%;"></div>
+            </div>
+          </div>
+
+          <!-- Toolbar -->
+          <div class="wf-bucket-toolbar" style="margin-bottom: var(--space-4);">
+            <div style="font-size: 13px; color: var(--text-muted);">
+              Select any slot below to edit its asset format, script, captions, or scheduling.
+            </div>
+            <div style="display: flex; gap: var(--space-2);">
+              <button class="btn btn-ghost btn-sm" type="button" onclick="resetPrototypeStorage()" title="Reset localStorage back to 7/12 filled slots demo">
+                ↺ Reset Prototype Data
+              </button>
+              <button class="btn btn-primary btn-sm" type="button" onclick="navigateToStep(2)">
+                + Edit Selected Slot →
+              </button>
+            </div>
+          </div>
+
+          <!-- 12-Slot Visual Grid Container -->
+          <div id="slotGrid12" class="wf-slot-grid-12">
+            <!-- Dynamically populated by render12SlotGrid() in app.js -->
+          </div>
+
+          <div class="wf-annotation-box">
+            <span class="wf-annotation-badge">Confirmed: Bhavya Spec</span>
+            <div class="wf-annotation-text">
+              <strong>12-Slot Capacity & Partial Bucket Validity:</strong> Maximum 12 slots per bucket. A partial bucket (e.g. 7/12 filled) is valid and can be scheduled without waiting for all 12 slots to be populated.
+            </div>
+          </div>
+        </div>
+
+        <div class="wireframe-actions">
+          <button class="btn btn-ghost action-back" onclick="switchFlow('onboarding')">← Back to Onboarding Flow</button>
+          <button class="btn btn-primary action-next" onclick="nextStep()">Next: Add / Edit Slot Asset →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen BUCKET-2: Video / Reel / Idea Ingestion -->
+    <section class="wireframe-screen-view" id="screen-content-bucket-2" style="display: none;">
+      <div class="wireframe-screen-card">
+        <div class="wireframe-screen-intro">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <div class="screen-eyebrow">Wireframe Screen 02 • Content Bucket Flow</div>
+            <span id="bkt2ActiveSlotBadge" class="wf-trust-badge manual">Editing Slot 1 of 12</span>
+          </div>
+          <h2 class="screen-title">Add Content: Video, Reel, or Idea</h2>
+          <p class="screen-desc">Assign media format and working title to the current Content Bucket slot.</p>
+        </div>
+
+        <div class="wireframe-body">
+          <!-- Slot Working Title -->
+          <div class="wf-form-group" style="margin-bottom: var(--space-4);">
+            <label class="wf-label" for="bkt2SlotTitle">
+              <span>Slot Working Title</span>
+              <span class="required-badge">*Required</span>
+            </label>
+            <input type="text" id="bkt2SlotTitle" class="wf-input" placeholder="e.g. Stop Hand-Crafting Hooks in 2026" oninput="updateSlotTitleFromInput(this.value)">
+            <span class="wf-hint">Internal reference title for this slot in the Content Bucket grid.</span>
+          </div>
+
+          <!-- Format Selection Cards -->
+          <div class="wf-form-group" style="margin-bottom: var(--space-5);">
+            <label class="wf-label">Select Slot Content Format</label>
+            <div class="wf-grid-3">
+              <div class="wf-select-card bkt2-format-card selected" data-type="video" onclick="selectSlotFormat(this, 'video')">
+                <div class="card-icon">🎬</div>
+                <div class="card-title">Longform Video</div>
+                <div class="card-desc">16:9 Landscape master footage for YouTube or deep dives.</div>
+              </div>
+
+              <div class="wf-select-card bkt2-format-card" data-type="reel" onclick="selectSlotFormat(this, 'reel')">
+                <div class="card-icon">📱</div>
+                <div class="card-title">Shortform Reel / Short</div>
+                <div class="card-desc">9:16 Vertical video for Instagram Reels, Shorts, or TikTok.</div>
+              </div>
+
+              <div class="wf-select-card bkt2-format-card" data-type="idea" onclick="selectSlotFormat(this, 'idea')">
+                <div class="card-icon">💡</div>
+                <div class="card-title">Idea Note / Text Post</div>
+                <div class="card-desc">Script-first concept or text-based hook for LinkedIn or carousels.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Simulated Dropzone -->
+          <div class="wf-box-dashed" style="padding: var(--space-6) var(--space-4); text-align: center; margin-bottom: var(--space-4);">
+            <div style="font-size: 32px; margin-bottom: 8px;">📹</div>
+            <div style="font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">
+              Simulated Media Asset Attachment
+            </div>
+            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: var(--space-3); max-width: 520px; margin-left: auto; margin-right: auto;">
+              Demonstration wireframe: Ingests mock video metadata. No live video bytes are stored or transferred.
+            </p>
+            <div style="display: inline-flex; align-items: center; gap: 8px; background: var(--surface-default); border: 1px solid var(--surface-border); padding: 6px 14px; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 12px; color: var(--accent-cyan);">
+              <span>Sample Attached: slot_asset_master.mp4 [File size, format, duration: Pending Team Confirmation]</span>
+            </div>
+          </div>
+
+          <div class="wf-annotation-box">
+            <span class="wf-annotation-badge">Unconfirmed Technical Assumptions</span>
+            <div class="wf-annotation-text">
+              <strong>Technical Specifications Pending Confirmation:</strong> (1) Upload formats (MP4, MOV, WebM, etc.). (2) File size limits (e.g. 500MB vs 2GB). (3) Maximum video durations. None of these technical limits are hardcoded as platform facts.
+            </div>
+          </div>
+        </div>
+
+        <div class="wireframe-actions">
+          <button class="btn btn-ghost action-back" onclick="prevStep()">← Previous</button>
+          <button class="btn btn-primary action-next" onclick="nextStep()">Next: Required Script Input →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen BUCKET-3: Required Script Input -->
+    <section class="wireframe-screen-view" id="screen-content-bucket-3" style="display: none;">
+      <div class="wireframe-screen-card">
+        <div class="wireframe-screen-intro">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <div class="screen-eyebrow">Wireframe Screen 03 • Confirmed Content Bucket Workflow</div>
+            <span id="bkt3ActiveSlotBadge" class="wf-trust-badge manual">Slot 1: Stop Hand-Crafting Hooks</span>
+          </div>
+          <h2 class="screen-title">Mandatory Script Input</h2>
+          <p class="screen-desc">Every post requires a script. A post cannot advance to captions, approval, or scheduling without a valid script.</p>
+        </div>
+
+        <div class="wireframe-body">
+          <!-- Visible Error Banner for Missing Script -->
+          <div id="scriptValidationBanner" class="wf-error-banner" role="alert">
+            <span style="font-size: 16px;">⚠️</span>
+            <div>
+              <strong>Validation Error: Every post requires a script.</strong><br>
+              A post cannot advance to captions, review, or scheduling without a script. Please enter your script below.
+            </div>
+          </div>
+
+          <div class="wf-grid-2" style="gap: 20px;">
+            <!-- Left: Primary Script Form -->
+            <div>
+              <div class="wf-form-group">
+                <label class="wf-label" for="scriptInput">
+                  <span>Video / Content Script</span>
+                  <span class="required-badge">*Required</span>
+                </label>
+                <textarea id="scriptInput" class="wf-textarea" style="min-height: 140px;" placeholder="Write or paste your full video script, voiceover transcript, or post content here..."></textarea>
+                <span class="wf-hint">
+                  Every post requires a script before advancing. (Note: Specific internal section breakdown e.g. Hook / Core / CTA is pending team confirmation).
+                </span>
+              </div>
+
+              <!-- Optional Section Breakdown Guide -->
+              <details style="margin-top: var(--space-3); border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: var(--space-3); background: var(--surface-subtle);">
+                <summary style="font-size: 12px; font-weight: 600; cursor: pointer; color: var(--accent-cyan);">
+                  Optional Structuring Guide: Hook • Key Points • CTA [Pending Team Confirmation]
+                </summary>
+                <div style="margin-top: var(--space-3); display: flex; flex-direction: column; gap: var(--space-2);">
+                  <div>
+                    <label class="wf-label" for="scriptHookInput" style="font-size: 11px;">Opening Hook (Optional Guide)</label>
+                    <input type="text" id="scriptHookInput" class="wf-input" style="font-size: 12px;" placeholder="Pattern interrupt or opening hook...">
+                  </div>
+                  <div>
+                    <label class="wf-label" for="scriptBodyInput" style="font-size: 11px;">Key Value Points (Optional Guide)</label>
+                    <textarea id="scriptBodyInput" class="wf-textarea" style="min-height: 60px; font-size: 12px;" placeholder="Core breakdown or insight..."></textarea>
+                  </div>
+                  <div>
+                    <label class="wf-label" for="scriptCtaInput" style="font-size: 11px;">Call to Action (Optional Guide)</label>
+                    <input type="text" id="scriptCtaInput" class="wf-input" style="font-size: 12px;" placeholder="Closing CTA or comment prompt...">
+                  </div>
+                </div>
+              </details>
+            </div>
+
+            <!-- Right: Telemetry & Gate Status -->
+            <div>
+              <div class="wf-box" style="margin-bottom: var(--space-4);">
+                <div style="font-family: var(--font-heading); font-weight: 700; font-size: 14px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+                  <span>Script Telemetry</span>
+                  <span id="scriptReqStatus" style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #10B981;">Script Provided (Valid)</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 8px;">
+                  <span style="color: var(--text-muted);">Total Word Count:</span>
+                  <span id="scriptWordCount" style="font-family: var(--font-mono); font-weight: 600;">0 Words</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 8px;">
+                  <span style="color: var(--text-muted);">Estimated Spoken Pace:</span>
+                  <span id="scriptPaceEstimate" style="font-family: var(--font-mono); font-weight: 600;">~0 Seconds</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 13px;">
+                  <span style="color: var(--text-muted);">Pacing Calibration:</span>
+                  <span style="font-family: var(--font-mono); font-weight: 600; color: var(--accent-cyan);">~138 WPM [Sample Pace]</span>
+                </div>
+              </div>
+
+              <div class="wf-box-dashed" style="padding: var(--space-4);">
+                <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 6px;">
+                  <span class="wf-trust-badge sample">Bhavya Rule</span>
+                  <span style="font-weight: 600; font-size: 13px;">Mandatory Script Requirement</span>
+                </div>
+                <p style="font-size: 12px; color: var(--text-muted); line-height: 1.5; margin: 0;">
+                  A script is required before advancing to Step 4 (Captions), Step 5 (Approval), or Step 6 (Scheduling). You can return to earlier screens at any time to revise content.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="wf-annotation-box">
+            <span class="wf-annotation-badge">Confirmed: Bhavya Spec</span>
+            <div class="wf-annotation-text">
+              <strong>Mandatory Script Gate:</strong> Confirmed by Bhavya. Without an explicit script, AI caption generation cannot ground itself in creator factuality. Advancement is programmatically blocked if the script is empty.
+            </div>
+          </div>
+        </div>
+
+        <div class="wireframe-actions">
+          <button class="btn btn-ghost action-back" onclick="prevStep()">← Previous</button>
+          <button class="btn btn-primary action-next" onclick="nextStep()">Next: Caption Editing & AI Correction →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen BUCKET-4: Caption Editing & AI Correction -->
+    <section class="wireframe-screen-view" id="screen-content-bucket-4" style="display: none;">
+      <div class="wireframe-screen-card">
+        <div class="wireframe-screen-intro">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <div class="screen-eyebrow">Wireframe Screen 04 • Confirmed Content Bucket Workflow</div>
+            <span id="bkt4ActiveSlotBadge" class="wf-trust-badge manual">Slot 1: Stop Hand-Crafting Hooks</span>
+          </div>
+          <h2 class="screen-title">Caption Editing & AI Correction</h2>
+          <p class="screen-desc">Captions are synthesized from your script and voice profile. Edit freely or apply style correction.</p>
+        </div>
+
+        <div class="wireframe-body">
+          <div class="wf-grid-2" style="gap: 20px;">
+            <!-- Left: Editable Caption Area -->
+            <div>
+              <div class="wf-form-group">
+                <div class="wf-label" style="display: flex; justify-content: space-between; align-items: center;">
+                  <span>Post Caption (Manual Editing Enabled)</span>
+                  <span id="captionStyleBadge" class="wf-trust-badge ai-suggested">Sample • AI-suggested</span>
+                </div>
+                <textarea id="captionInput" class="wf-textarea" style="min-height: 140px;" placeholder="AI-suggested caption appears here..."></textarea>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+                  <span class="wf-hint">Character counts [Per-platform character limits pending team confirmation]</span>
+                  <button class="btn btn-secondary btn-sm" type="button" onclick="applyAiCorrection()">
+                    ✨ AI Correction (Apply Creator Style)
+                  </button>
+                </div>
+              </div>
+
+              <!-- Suggested Hashtags -->
+              <div class="wf-form-group" style="margin-top: var(--space-4);">
+                <div class="wf-label" style="display: flex; justify-content: space-between; align-items: center;">
+                  <span>Suggested Hashtags</span>
+                  <span class="wf-trust-badge sample">AI-suggested</span>
+                </div>
+                <div id="hashtagChipsList" class="wf-chips-grid" style="margin-top: 6px;">
+                  <!-- Populated by renderHashtagsList(slot) -->
+                </div>
+                <span class="wf-hint" style="margin-top: 4px; display: block;">Click to toggle inclusion. Labeled as AI-suggested (never called trending without verified trend data).</span>
+              </div>
+            </div>
+
+            <!-- Right: Extras & Music Ideas -->
+            <div>
+              <div class="wf-box" style="margin-bottom: var(--space-4);">
+                <div style="font-family: var(--font-heading); font-size: 14px; font-weight: 700; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+                  <span>Music & Audio Ideas</span>
+                  <span class="wf-trust-badge sample">AI-suggested</span>
+                </div>
+                <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 8px;">
+                  Suggested audio pairing based on script pacing:
+                </div>
+                <div id="musicIdeaDisplay" style="background: var(--surface-default); border: 1px solid var(--surface-border); padding: 10px 14px; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 12px; color: var(--accent-cyan); margin-bottom: 8px;">
+                  Atmospheric Synthwave (120 BPM) [AI-suggested - Unverified Trend Data]
+                </div>
+                <div style="font-size: 11px; color: var(--text-subtle);">
+                  ⚠️ Transparency Notice: Never labeled "trending" without live verified platform telemetry.
+                </div>
+              </div>
+
+              <div class="wf-box-dashed" style="padding: var(--space-4);">
+                <div style="font-weight: 600; font-size: 13px; margin-bottom: 4px;">Trust & Transparency Guarantee</div>
+                <p style="font-size: 12px; color: var(--text-muted); line-height: 1.5; margin: 0;">
+                  All simulated AI outputs are explicitly labeled <code>Sample</code> and <code>AI-suggested</code>. Shows "Served from memory" only when derived from stored creator profile memory.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="wf-annotation-box">
+            <span class="wf-annotation-badge">Unconfirmed Technical Assumptions</span>
+            <div class="wf-annotation-text">
+              <strong>Open Technical Question:</strong> Caption character constraints and hashtag distribution limits per platform are unconfirmed and pending team consensus.
+            </div>
+          </div>
+        </div>
+
+        <div class="wireframe-actions">
+          <button class="btn btn-ghost action-back" onclick="prevStep()">← Previous</button>
+          <button class="btn btn-primary action-next" onclick="nextStep()">Next: Human Review & Approval →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen BUCKET-5: Consolidated Review & Human Approval -->
+    <section class="wireframe-screen-view" id="screen-content-bucket-5" style="display: none;">
+      <div class="wireframe-screen-card">
+        <div class="wireframe-screen-intro">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <div class="screen-eyebrow">Wireframe Screen 05 • Confirmed Content Bucket Workflow</div>
+            <span id="revSlotBadge" class="wf-trust-badge manual">Slot 1 of 12 • Format: VIDEO</span>
+          </div>
+          <h2 class="screen-title">Single-Pane Review & Human Approval</h2>
+          <p class="screen-desc">Inspect stored slot data (script, media, captions, status) and grant mandatory human approval prior to scheduling.</p>
+        </div>
+
+        <div class="wireframe-body">
+          <div class="wf-grid-2" style="gap: 20px;">
+            <!-- Left: Stored Slot Metadata -->
+            <div>
+              <div class="wf-box" style="margin-bottom: var(--space-4);">
+                <div style="font-size: 11px; color: var(--text-subtle); margin-bottom: 2px;">SLOT TITLE</div>
+                <div id="revTitle" style="font-family: var(--font-heading); font-size: 15px; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">
+                  Stop Hand-Crafting Hooks in 2026
+                </div>
+
+                <div style="font-size: 11px; color: var(--text-subtle); margin-bottom: 2px;">STORED SCRIPT (MANDATORY)</div>
+                <div id="revHook" style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-bottom: 12px; line-height: 1.4;">
+                  "Stop wasting 10 hours writing and recording video hooks by hand in 2026..."
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+                  <span style="font-size: 11px; color: var(--text-subtle);">STORED CAPTION</span>
+                  <span id="revCaptionSourceBadge" class="wf-trust-badge ai-suggested">Sample • AI-suggested</span>
+                </div>
+                <div id="revCaption" style="font-size: 13px; color: var(--text-primary); margin-bottom: 12px; line-height: 1.4;">
+                  Tired of the creator burnout cycle? Here is how autonomous AI pipelines 10x your content output without sacrificing creative control. 🚀
+                </div>
+
+                <div style="font-size: 11px; color: var(--text-subtle); margin-bottom: 2px;">SUGGESTED AUDIO PAIRING</div>
+                <div id="revMusic" style="font-family: var(--font-mono); font-size: 12px; color: var(--accent-cyan);">
+                  Atmospheric Synthwave (120 BPM)
+                </div>
+              </div>
+
+              <div style="font-size: 12px; color: var(--text-subtle); display: flex; align-items: center; gap: 6px;">
+                <span class="wf-trust-badge sample">Local Prototype State</span>
+                <span>Slot package preserved in browser local storage demo.</span>
+              </div>
+            </div>
+
+            <!-- Right: Human Approval Panel -->
+            <div>
+              <div class="wf-approval-panel">
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                  <div style="font-family: var(--font-heading); font-size: 15px; font-weight: 700; color: var(--text-primary);">
+                    Mandatory Human Approval Gate
+                  </div>
+                  <div style="font-size: 12px; color: var(--text-muted); max-width: 380px;">
+                    CreatorOS AI enforces strict human oversight: Content is never scheduled or dispatched automatically without creator sign-off.
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 12px;">
+                  <span id="approvalStatusBadge" class="wf-status-pill approved">Human Approved ✓</span>
+                </div>
+              </div>
+
+              <div class="wf-box" style="margin-top: var(--space-4);">
+                <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                  <input type="checkbox" id="humanApprovalCheckbox" style="margin-top: 3px; accent-color: var(--primary-violet); width: 18px; height: 18px;" onchange="toggleHumanApproval(this.checked)">
+                  <div>
+                    <div style="font-size: 13px; font-weight: 600; color: var(--text-primary);">
+                      I explicitly approve this script and caption package for dispatch
+                    </div>
+                    <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">
+                      Strictly required to unlock scheduling in Screen BKT-6.
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="wf-annotation-box">
+            <span class="wf-annotation-badge">Confirmed: Bhavya Spec</span>
+            <div class="wf-annotation-text">
+              <strong>Human-in-the-Loop Constraint:</strong> Never auto-publish without human approval. The approval gate ensures creators retain final editorial sovereignty over all AI-suggested content.
+            </div>
+          </div>
+        </div>
+
+        <div class="wireframe-actions">
+          <button class="btn btn-ghost action-back" onclick="prevStep()">← Previous</button>
+          <button class="btn btn-primary action-next" onclick="nextStep()">Next: Scheduling & Truthful Publishing →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen BUCKET-6: Scheduling Interface & Truthful Publishing -->
+    <section class="wireframe-screen-view" id="screen-content-bucket-6" style="display: none;">
+      <div class="wireframe-screen-card">
+        <div class="wireframe-screen-intro">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <div class="screen-eyebrow">Wireframe Screen 06 • Confirmed Content Bucket Workflow</div>
+            <span id="schedSlotBadge" class="wf-trust-badge manual">Slot 1: Stop Hand-Crafting Hooks</span>
+          </div>
+          <h2 class="screen-title">Scheduling & Truthful Publishing</h2>
+          <p class="screen-desc">Select publish date and time. Actual scheduling is handled by a separate agent with truthful status reporting.</p>
+        </div>
+
+        <div class="wireframe-body">
+          <div class="wf-grid-2" style="gap: 20px;">
+            <!-- Left: Confirmed Platform Scope & Time Selection -->
+            <div>
+              <div class="wf-form-group">
+                <label class="wf-label">Confirmed Platform Destinations (Bhavya Scope)</label>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                  <label class="wf-box" style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                    <input type="checkbox" checked style="accent-color: var(--accent-cyan);">
+                    <div style="flex: 1;">
+                      <div style="font-weight: 600; font-size: 13px;">LinkedIn (@alexrivera_ai)</div>
+                      <div style="font-size: 11px; color: var(--text-muted);">Real posting planned first</div>
+                    </div>
+                    <span class="wf-platform-badge">Planned Priority 1</span>
+                  </label>
+
+                  <label class="wf-box" style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                    <input type="checkbox" checked style="accent-color: var(--accent-cyan);">
+                    <div style="flex: 1;">
+                      <div style="font-weight: 600; font-size: 13px;">Instagram Reels (@alexrivera_ai)</div>
+                      <div style="font-size: 11px; color: var(--text-muted);">Real posting for team accounts; requires public video URL</div>
+                    </div>
+                    <span class="wf-trust-badge sample">Reels URL</span>
+                  </label>
+
+                  <label class="wf-box" style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                    <input type="checkbox" checked style="accent-color: var(--accent-cyan);">
+                    <div style="flex: 1;">
+                      <div style="font-weight: 600; font-size: 13px;">YouTube (@alexrivera_ai)</div>
+                      <div style="font-size: 11px; color: var(--text-muted);">Upload as "Private, pending audit" (YouTube policy)</div>
+                    </div>
+                    <span class="wf-trust-badge sample">Private Audit</span>
+                  </label>
+
+                  <label class="wf-box" style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                    <input type="checkbox" style="accent-color: var(--accent-cyan);">
+                    <div style="flex: 1;">
+                      <div style="font-weight: 600; font-size: 13px;">TikTok (@alexrivera_ai)</div>
+                      <div style="font-size: 11px; color: var(--text-muted);">Draft/private only, if time permits</div>
+                    </div>
+                    <span class="wf-trust-badge sample">Draft Only</span>
+                  </label>
+                </div>
+
+                <!-- Exclusion Banner for X -->
+                <div style="margin-top: 8px; font-size: 11px; color: var(--text-subtle); display: flex; align-items: center; gap: 6px;">
+                  <span style="color: #EF4444; font-weight: 700;">✕ Excluded:</span>
+                  <span>X (Twitter) is explicitly excluded from Content Bucket scope.</span>
+                </div>
+              </div>
+
+              <!-- Date & Time Pickers -->
+              <div class="wf-grid-2">
+                <div class="wf-form-group">
+                  <label class="wf-label" for="schedDateInput">Publish Date</label>
+                  <input type="date" id="schedDateInput" class="wf-input" value="2026-11-04">
+                </div>
+                <div class="wf-form-group">
+                  <label class="wf-label" for="schedTimeInput">
+                    <span>Publish Time</span>
+                    <span class="wf-trust-badge manual">IST (Provisional)</span>
+                  </label>
+                  <input type="time" id="schedTimeInput" class="wf-input" value="17:30">
+                </div>
+              </div>
+              <span class="wf-hint" style="margin-top: -6px; display: block; margin-bottom: 12px;">
+                Provisional timezone: Indian Standard Time (IST, UTC+05:30) [Pending Team Confirmation].
+              </span>
+            </div>
+
+            <!-- Right: Schedule Dispatch Action & Truthful Publishing Cards -->
+            <div>
+              <div class="wf-box" style="margin-bottom: var(--space-4);">
+                <div style="font-family: var(--font-heading); font-size: 14px; font-weight: 700; margin-bottom: 6px; color: var(--accent-cyan);">
+                  ⚡ Dispatch Coordination
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); line-height: 1.4; margin-bottom: 12px;">
+                  Real scheduling is handled by a separate agent. Never auto-publishes without human approval.
+                </p>
+
+                <div id="schedApprovalCheckNote" style="display: none; background: rgba(245, 158, 11, 0.1); border: 1px solid #F59E0B; padding: 8px 12px; border-radius: var(--radius-sm); font-size: 12px; color: #FCD34D; margin-bottom: 12px;">
+                  ⚠️ Note: This slot has not received explicit Human Approval in Screen BKT-5.
+                </div>
+
+                <label style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; cursor: pointer;">
+                  <input type="checkbox" id="schedExplicitApproveCheck" style="accent-color: var(--accent-cyan);">
+                  <span style="font-size: 12px; color: var(--text-primary); font-weight: 500;">
+                    I confirm the proposed schedule time and dispatch parameters
+                  </span>
+                </label>
+
+                <button class="btn btn-accent btn-lg" style="width: 100%; font-size: 14px;" type="button" onclick="simulatePublishDemonstration()">
+                  Confirm Proposed Schedule (Approved) 🚀
+                </button>
+              </div>
+
+              <!-- Truthful Status Demonstration Cards (Never displays "Live") -->
+              <div>
+                <div style="font-size: 12px; font-weight: 700; color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">
+                  Truth in Publishing: Real Demonstration States
+                </div>
+                <div class="wf-publish-demo-grid">
+                  <!-- State 1: Scheduled -->
+                  <div class="wf-publish-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <span class="wf-slot-num">STATE 1</span>
+                      <span class="wf-status-pill scheduled">Scheduled</span>
+                    </div>
+                    <div style="font-size: 12px; font-weight: 600;">Pending Agent Dispatch</div>
+                    <div style="font-size: 11px; color: var(--text-muted);">Awaiting scheduled dispatch window (17:30 IST provisional).</div>
+                  </div>
+
+                  <!-- State 2: Publishing -->
+                  <div class="wf-publish-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <span class="wf-slot-num">STATE 2</span>
+                      <span class="wf-status-pill ready">Publishing</span>
+                    </div>
+                    <div style="font-size: 12px; font-weight: 600;">Transient Dispatch</div>
+                    <div style="font-size: 11px; color: var(--text-muted);">Simulated uploading and destination webhook handshake.</div>
+                  </div>
+
+                  <!-- State 3: Posted (Sample) -->
+                  <div class="wf-publish-card status-posted">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <span class="wf-slot-num">STATE 3</span>
+                      <span class="wf-status-pill posted">Posted (Sample)</span>
+                    </div>
+                    <div style="font-size: 12px; font-weight: 600;">Private, Pending Audit</div>
+                    <div style="font-size: 11px; color: var(--text-muted);">Uploaded with audit visibility. Never labeled public or live without confirmation.</div>
+                  </div>
+
+                  <!-- State 4: Failed with Retry (Demonstrating Success & Failure Outcomes with Preserved History) -->
+                  <div class="wf-publish-card status-failed">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <span class="wf-slot-num">STATE 4</span>
+                      <span class="wf-status-pill failed" id="demoFailedStatusPill">Failed (Sample)</span>
+                    </div>
+                    <div style="font-size: 12px; font-weight: 600;" id="demoFailedStatusText">Sample Failure: OAuth Token Expired</div>
+                    <div style="font-size: 11px; color: #FCA5A5;" id="demoFailedErrorDetail">Simulated dispatch error (Code 401: OAuth token expired).</div>
+
+                    <!-- Simulated Retry in Progress Indicator -->
+                    <div id="retryInProgressBanner" style="display: none; background: rgba(34, 211, 238, 0.12); border: 1px solid var(--accent-cyan); padding: 8px 10px; border-radius: var(--radius-sm); font-size: 11px; color: var(--accent-cyan); margin-top: 6px;">
+                      ⏳ Simulated retry in progress... Re-verifying simulated tokens and handshakes...
+                    </div>
+
+                    <!-- Retry Actions: Demonstrates Both Outcomes -->
+                    <div id="retryActionButtons" style="display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap;">
+                      <button id="retrySuccessBtn" class="btn btn-secondary btn-sm" type="button" style="flex: 1; font-size: 11px;" onclick="simulateRetryWithOutcome('success')">
+                        ↻ Test Sample Success
+                      </button>
+                      <button id="retryFailBtn" class="btn btn-ghost btn-sm" type="button" style="flex: 1; font-size: 11px; border: 1px solid rgba(239, 68, 68, 0.4); color: #FCA5A5;" onclick="simulateRetryWithOutcome('failure')">
+                        ↻ Test Sample Failure
+                      </button>
+                    </div>
+
+                    <!-- Preserved Attempt History Log -->
+                    <div style="margin-top: 8px; border-top: 1px dashed var(--surface-border); padding-top: 6px;">
+                      <div style="font-size: 10px; font-family: var(--font-mono); color: var(--text-subtle); text-transform: uppercase; margin-bottom: 4px;">
+                        Preserved Demo Attempt History:
+                      </div>
+                      <div id="retryHistoryList" style="display: flex; flex-direction: column; gap: 4px; font-size: 11px; font-family: var(--font-mono);">
+                        <!-- Populated dynamically by renderRetryHistory(slot) in app.js -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wf-annotation-box">
+            <span class="wf-annotation-badge">Unconfirmed Technical Assumptions</span>
+            <div class="wf-annotation-text">
+              <strong>Open Technical Questions:</strong> (1) Simultaneous vs sequential multi-platform dispatch strategy. (2) Definite timezone support. (3) Token refresh retry backoff policies. None of these are hardcoded as facts.
+            </div>
+          </div>
+        </div>
+
+        <div class="wireframe-actions">
+          <button class="btn btn-ghost action-back" onclick="prevStep()">← Previous</button>
+          <button class="btn btn-accent action-next" onclick="simulatePublishDemonstration()">Confirm Proposed Schedule (Approved)</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Prototype Footer -->
+  <footer class="proto-footer">
+    <div class="container">
+      <p style="margin-bottom: 4px;"><strong>CreatorOS AI — H5 Wireframe Prototype</strong> • CodeMeet 2026</p>
+      <p style="font-size: 12px; color: var(--text-subtle);">Authored by Jeevan (UI/UX Designer). Pure frontend simulation — no active backend or database connections.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
